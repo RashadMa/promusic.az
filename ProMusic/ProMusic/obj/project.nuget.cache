@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z/imfhwDeUCwjbz7in6gnaHLo1lraMDqbsyzXYjrnJKb05XjTCqPgsCW8mgilAm02fE/pMh1K+6uUxFiwstlbQ==",
+  "dgSpecHash": "0qpwCGgrUEG0Vq8KlFG4A5eqx5gYXrhFtJ97n6zfCtaU1HugD/ihlfrZavmHj6deYOiDmjLYr+Shb7hyfPyxOA==",
   "success": true,
-  "projectFilePath": "/Users/rashad/Desktop/back/ProMusic/ProMusic/ProMusic.csproj",
+  "projectFilePath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/ProMusic.csproj",
   "expectedPackageFiles": [
     "/Users/rashad/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.bcl.hashcode/1.1.1/microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

@@ -1,30 +1,17 @@
 ﻿<Properties StartupConfiguration="{032CC425-AD65-417A-AD7A-63954631E9D3}|Default">
   <MonoDevelop.Ide.ItemProperties.ProMusic FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.ProMusic.Core FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/DataContext.cs">
-    <Files>
-      <File FileName="ProMusic.Data/DataContext.cs" Line="13" Column="41" />
-      <File FileName="ProMusic/Startup.cs" Line="33" Column="16" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="ProjectDependencies" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="ProMusic.Core" expanded="True" />
-            <Node name="ProMusic.Data" expanded="True">
-              <Node name="Migrations" expanded="True" />
-              <Node name="DataContext.cs" selected="True" />
-            </Node>
+            <Node name="ProMusic.Service" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ProMusic.Service FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>ProMusic.Service/ProMusic.Service.csproj</String>

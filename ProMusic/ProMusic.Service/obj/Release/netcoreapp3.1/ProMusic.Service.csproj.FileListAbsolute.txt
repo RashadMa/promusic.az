@@ -1,0 +1,15 @@
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Service.deps.json
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Service.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Service.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Core.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Data.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Data.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/bin/Release/netcoreapp3.1/ProMusic.Core.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.csproj.AssemblyReference.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.AssemblyInfoInputs.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.AssemblyInfo.cs
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.csproj.CoreCompileInputs.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.csproj.CopyComplete
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/Release/netcoreapp3.1/ProMusic.Service.pdb

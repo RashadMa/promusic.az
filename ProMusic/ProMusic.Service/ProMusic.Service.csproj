@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\" />
+    <None Remove="Implementations\" />
+    <None Remove="DTOs\" />
+    <None Remove="Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj" />
+  </ItemGroup>
+</Project>

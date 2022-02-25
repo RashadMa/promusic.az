@@ -19,7 +19,7 @@
     <Folder Include="Apps\Admin\Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj">
+    <ProjectReference Include="..\ProMusic.Service\ProMusic.Service.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
