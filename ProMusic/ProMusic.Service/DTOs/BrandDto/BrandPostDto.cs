@@ -7,9 +7,9 @@ namespace ProMusic.Service.DTOs.BrandDto
     {
         public string Name { get; set; }
     }
-    public class CategoryPostDtoValidator : AbstractValidator<BrandPostDto>
+    public class BrandPostDtoValidator : AbstractValidator<BrandPostDto>
     {
-        public CategoryPostDtoValidator()
+        public BrandPostDtoValidator()
         {
             RuleFor(x => x.Name)
                 .MaximumLength(20).WithMessage("Max length must be less than 20 character")

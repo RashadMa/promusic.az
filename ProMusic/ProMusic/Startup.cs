@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ProMusic.Data;
+using ProMusic.Service.DTOs.BrandDto;
 
 namespace ProMusic
 {
@@ -30,7 +32,7 @@ namespace ProMusic
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
-            });
+            }).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<BrandPostDtoValidator>());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
