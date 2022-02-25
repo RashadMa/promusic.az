@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0qpwCGgrUEG0Vq8KlFG4A5eqx5gYXrhFtJ97n6zfCtaU1HugD/ihlfrZavmHj6deYOiDmjLYr+Shb7hyfPyxOA==",
+  "dgSpecHash": "hYHGGsTZ9u5zanK+25gXaT6Cixo3rqMbXrFDNA6WBTkXFaaupzMHNX7RLx+9Wvfec/aj5ObmRweLI61JvhXi9Q==",
   "success": true,
   "projectFilePath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/ProMusic.csproj",
   "expectedPackageFiles": [
+    "/Users/rashad/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/fluentvalidation.aspnetcore/10.3.6/fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.3.6/fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.bcl.hashcode/1.1.1/microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

@@ -9,14 +9,20 @@
     <None Remove="Implementations\" />
     <None Remove="DTOs\" />
     <None Remove="Profile\" />
+    <None Remove="DTOs\BrandDto\" />
+    <None Remove="FluentValidation.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Implementations\" />
     <Folder Include="DTOs\" />
     <Folder Include="Profile\" />
+    <Folder Include="DTOs\BrandDto\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
   </ItemGroup>
 </Project>

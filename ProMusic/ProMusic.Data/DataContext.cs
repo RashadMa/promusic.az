@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using ProMusic.Core.Entities;
 
 namespace ProMusic.Data
 {
@@ -9,6 +10,8 @@ namespace ProMusic.Data
         {
 
         }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Setting> Settings { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
