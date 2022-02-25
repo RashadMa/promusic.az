@@ -1,0 +1,16 @@
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Data.deps.json
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Data.runtimeconfig.json
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Data.runtimeconfig.dev.json
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Data.dll
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Data.pdb
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Core.dll
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/bin/Debug/netcoreapp3.1/ProMusic.Core.pdb
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.csproj.AssemblyReference.cache
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.AssemblyInfoInputs.cache
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.AssemblyInfo.cs
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.csproj.CoreCompileInputs.cache
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.csproj.CopyComplete
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.dll
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.pdb
+/Users/rashad/Desktop/ProMusic.Api/ProMusic.Data/obj/Debug/netcoreapp3.1/ProMusic.Data.genruntimeconfig.cache

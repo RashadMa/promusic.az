@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="Apps\" />
+    <None Remove="Apps\Admin\" />
+    <None Remove="Apps\Member\" />
+    <None Remove="Apps\Admin\Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apps\" />
+    <Folder Include="Apps\Admin\" />
+    <Folder Include="Apps\Member\" />
+    <Folder Include="Apps\Admin\Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProMusic.Service\ProMusic.Service.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

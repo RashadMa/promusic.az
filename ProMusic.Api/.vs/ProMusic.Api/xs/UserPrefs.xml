@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{4DCDD831-4296-4DB4-8B62-F0F58E960289}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Api/Startup.cs">
+    <Files>
+      <File FileName="ProMusic.Data/DataContext.cs" Line="8" Column="35" />
+      <File FileName="ProMusic.Api/Startup.cs" Line="33" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProMusic.Api" expanded="True">
+            <Node name="ProMusic.Api" expanded="True">
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+            <Node name="ProMusic.Service" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ProMusic.Service FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

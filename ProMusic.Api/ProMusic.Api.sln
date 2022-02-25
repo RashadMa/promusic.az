@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.19
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProMusic.Api", "ProMusic.Api\ProMusic.Api.csproj", "{4DCDD831-4296-4DB4-8B62-F0F58E960289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProMusic.Core", "ProMusic.Core\ProMusic.Core.csproj", "{1CA2B30B-D669-4C1F-8785-EC0820BB96CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProMusic.Data", "ProMusic.Data\ProMusic.Data.csproj", "{57D18907-56E5-4103-BD98-9E41013478E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProMusic.Service", "ProMusic.Service\ProMusic.Service.csproj", "{414DD909-115B-40FD-A178-A3C62353B774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DCDD831-4296-4DB4-8B62-F0F58E960289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCDD831-4296-4DB4-8B62-F0F58E960289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCDD831-4296-4DB4-8B62-F0F58E960289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCDD831-4296-4DB4-8B62-F0F58E960289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA2B30B-D669-4C1F-8785-EC0820BB96CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA2B30B-D669-4C1F-8785-EC0820BB96CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA2B30B-D669-4C1F-8785-EC0820BB96CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA2B30B-D669-4C1F-8785-EC0820BB96CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D18907-56E5-4103-BD98-9E41013478E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D18907-56E5-4103-BD98-9E41013478E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D18907-56E5-4103-BD98-9E41013478E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D18907-56E5-4103-BD98-9E41013478E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414DD909-115B-40FD-A178-A3C62353B774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414DD909-115B-40FD-A178-A3C62353B774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414DD909-115B-40FD-A178-A3C62353B774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414DD909-115B-40FD-A178-A3C62353B774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14C80746-0967-4A56-A99B-542919295F4D}
+	EndGlobalSection
+EndGlobal
