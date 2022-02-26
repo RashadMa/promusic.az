@@ -1,12 +1,10 @@
 ﻿<Properties StartupConfiguration="{032CC425-AD65-417A-AD7A-63954631E9D3}|Default">
   <MonoDevelop.Ide.ItemProperties.ProMusic PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Service/Implementations/BrandService.cs">
     <Files>
-      <File FileName="ProMusic.Core/Entities/Brand.cs" Line="6" Column="41" />
-      <File FileName="ProMusic.Data/DataContext.cs" Line="21" Column="12" />
-      <File FileName="ProMusic.Service/DTOs/BrandDto/BrandGetDto.cs" Line="7" Column="41" />
-      <File FileName="ProMusic.Service/DTOs/BrandDto/BrandPostDto.cs" Line="17" Column="10" />
-      <File FileName="ProMusic/Startup.cs" Line="33" Column="16" />
+      <File FileName="ProMusic.Service/DTOs/BrandDto/BrandListItemDto.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Service/Interfaces/IBrandService.cs" Line="15" Column="6" />
+      <File FileName="ProMusic.Service/Implementations/BrandService.cs" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +14,6 @@
               <Node name="Apps" expanded="True">
                 <Node name="Admin" expanded="True" />
               </Node>
-              <Node name="Startup.cs" selected="True" />
             </Node>
             <Node name="ProMusic.Core" expanded="True">
               <Node name="Entities" expanded="True" />
@@ -26,6 +23,10 @@
               <Node name="DTOs" expanded="True">
                 <Node name="BrandDto" expanded="True" />
               </Node>
+              <Node name="Implementations" expanded="True">
+                <Node name="BrandService.cs" selected="True" />
+              </Node>
+              <Node name="Interfaces" expanded="True" />
             </Node>
           </Node>
         </State>

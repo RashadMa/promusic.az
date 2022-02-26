@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using ProMusic.Data;
 using ProMusic.Service.DTOs.BrandDto;
 
@@ -33,6 +34,28 @@ namespace ProMusic
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
             }).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<BrandPostDtoValidator>());
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "ProMusic API",
+                    Version = "v1",
+                    Description = "An API to perform ProMusic operations",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Rashad Mammadov",
+                        Email = "code@code.edu.az",
+                        Url = new Uri("https://code.az"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Rashad",
+                        Url = new Uri("https://code.az"),
+                    }
+                });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -48,9 +71,16 @@ namespace ProMusic
 
             app.UseAuthorization();
 
+            app.UseSwagger();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProMusic API V1");
             });
         }
     }
