@@ -33,7 +33,11 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Microsoft.OpenApi.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/System.Collections.Immutable.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
@@ -54,7 +58,6 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/ProMusic.Service.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/ProMusic.Core.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/bin/Release/netcoreapp3.1/ProMusic.Data.pdb
-/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/obj/Release/netcoreapp3.1/ProMusic.csproj.AssemblyReference.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/obj/Release/netcoreapp3.1/ProMusic.GeneratedMSBuildEditorConfig.editorconfig
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/obj/Release/netcoreapp3.1/ProMusic.AssemblyInfoInputs.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/obj/Release/netcoreapp3.1/ProMusic.AssemblyInfo.cs

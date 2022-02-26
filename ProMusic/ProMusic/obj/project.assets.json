@@ -6043,7 +6043,7 @@
       "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/rashad/.config/NuGet/NuGet.Config"
+        "/Users/rashad/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

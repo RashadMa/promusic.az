@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ProMusic.Data;
+using ProMusic.Data.Repositories;
 using ProMusic.Service.DTOs.BrandDto;
 
 namespace ProMusic
@@ -30,6 +31,7 @@ namespace ProMusic
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<BrandRepository>();
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));

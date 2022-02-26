@@ -14,7 +14,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -66,7 +66,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -138,7 +138,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
