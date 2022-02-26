@@ -8,7 +8,10 @@ namespace ProMusic.Service.Implementations
 {
     public class BrandService : IBrandService
     {
+        public BrandService()
+        {
 
+        }
         public Task<BrandGetDto> CreateAsync(BrandPostDto postDto)
         {
             throw new NotImplementedException();
