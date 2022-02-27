@@ -8,7 +8,7 @@ using ProMusic.Core.Entities;
 
 namespace ProMusic.Data.Repositories
 {
-    public class BrandRepository
+    public class BrandRepository:IBrandRepository
     {
         private readonly DataContext _context;
 

@@ -32,7 +32,7 @@ namespace ProMusic.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<BrandRepository>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));

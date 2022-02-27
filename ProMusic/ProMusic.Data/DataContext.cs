@@ -15,7 +15,7 @@ namespace ProMusic.Data
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
-        //    modelBuilder.ApplyConfiguration(new CategoryConfig());
+        //    modelBuilder.ApplyConfiguration(new BrandConfiguration());
 
         //    base.OnModelCreating(modelBuilder);
         //}

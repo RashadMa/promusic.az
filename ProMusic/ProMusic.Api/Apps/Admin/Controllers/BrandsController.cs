@@ -17,10 +17,10 @@ namespace ProMusic.Apps.Admin.Controllers
     [ApiController]
     public class BrandsController : Controller
     {
-        private readonly BrandRepository _brandRepository;
+        private readonly IBrandRepository _brandRepository;
         private readonly IMapper _mapper;
 
-        public BrandsController(BrandRepository brandRepository, IMapper mapper)
+        public BrandsController(IBrandRepository brandRepository, IMapper mapper)
         {
             _brandRepository = brandRepository;
             _mapper = mapper;
