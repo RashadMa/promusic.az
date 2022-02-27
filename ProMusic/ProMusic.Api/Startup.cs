@@ -16,6 +16,7 @@ using Microsoft.OpenApi.Models;
 using ProMusic.Data;
 using ProMusic.Data.Repositories;
 using ProMusic.Helper.DTOs.BrandDto;
+using ProMusic.Helper.Profiles;
 
 namespace ProMusic.Api
 {
@@ -57,6 +58,10 @@ namespace ProMusic.Api
                         Url = new Uri("https://code.az"),
                     }
                 });
+            });
+            services.AddAutoMapper(cnf =>
+            {
+                cnf.AddProfile(new MapProfile());
             });
         }
 

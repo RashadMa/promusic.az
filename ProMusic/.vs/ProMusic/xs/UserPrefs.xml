@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/DataContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs">
     <Files>
-      <File FileName="ProMusic.Data/DataContext.cs" Line="19" Column="1" />
+      <File FileName="ProMusic.Data/DataContext.cs" Line="21" Column="12" />
+      <File FileName="ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" Line="73" Column="32" />
+      <File FileName="ProMusic.Data/Repositories/BrandRepository.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,19 +12,20 @@
             <Node name="ProMusic.Api" expanded="True">
               <Node name="Apps" expanded="True">
                 <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="BrandsController.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
             <Node name="ProMusic.Data" expanded="True">
               <Node name="Migrations" expanded="True" />
               <Node name="Repositories" expanded="True" />
-              <Node name="DataContext.cs" selected="True" />
             </Node>
             <Node name="ProMusic.Helper" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="BrandDto" expanded="True" />
-              </Node>
+              <Node name="DTOs" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProMusic.Core.Entities;
@@ -21,14 +22,19 @@ namespace ProMusic.Data.Repositories
             await _context.Brands.AddAsync(brand);
         }
 
-        public async Task<Brand> GetAsync(int id)
+        public async Task<bool> IsExist(Expression<Func<Brand, bool>> expression)
         {
-            return await _context.Brands.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Brands.AnyAsync(expression);
         }
 
-        public async Task<List<Brand>> GetAllAsync()
+        public async Task<Brand> GetAsync(Expression<Func<Brand, bool>> expression)
         {
-            return await _context.Brands.ToListAsync();
+            return await _context.Brands.FirstOrDefaultAsync(expression);
+        }
+
+        public IQueryable<Brand> GetAll(Expression<Func<Brand, bool>> expression)
+        {
+            return _context.Brands.Where(expression).AsQueryable();
         }
 
         public void Delete(Brand brand)
@@ -43,7 +49,7 @@ namespace ProMusic.Data.Repositories
 
         public int Save()
         {
-            return _context.SaveChanges(); 
+            return _context.SaveChanges();
         }
     }
 }
