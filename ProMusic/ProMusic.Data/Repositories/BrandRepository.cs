@@ -21,12 +21,12 @@ namespace ProMusic.Data.Repositories
             await _context.Brands.AddAsync(brand);
         }
 
-        public async Task<Brand> Get(int id)
+        public async Task<Brand> GetAsync(int id)
         {
             return await _context.Brands.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<Brand>> GetAll()
+        public async Task<List<Brand>> GetAllAsync()
         {
             return await _context.Brands.ToListAsync();
         }

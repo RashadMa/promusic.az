@@ -21,3 +21,4 @@ namespace ProMusic.Data
         //}
     }
 }
+//dotnet ef --startup-project ../ProMusic migrations add 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7yIst1nCMmx+4uau1g9+NXKhJLhalONYveNHcLMC1uLIlOlCoMk/Ufksf0uDQuYb4BMA2OZiQu8fQUfcJd0LMw==",
+  "dgSpecHash": "u0F1VDoMu1sK2ADUhPtqXjEU4VHS4k0QckKFrKfyvYtcDlcy4XklV+tcqyyenTeTFv8v9HIWNgrHcqigx49x0g==",
   "success": true,
-  "projectFilePath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/ProMusic.Core.csproj",
+  "projectFilePath": "/Users/rashad/Desktop/back/ProMusic/ProMusic.Core/ProMusic.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

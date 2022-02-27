@@ -5,11 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Entities\" />
     <None Remove="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>

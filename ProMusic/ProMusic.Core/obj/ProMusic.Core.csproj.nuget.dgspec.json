@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/ProMusic.Core.csproj": {}
+    "/Users/rashad/Desktop/back/ProMusic/ProMusic.Core/ProMusic.Core.csproj": {}
   },
   "projects": {
-    "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/ProMusic.Core.csproj": {
+    "/Users/rashad/Desktop/back/ProMusic/ProMusic.Core/ProMusic.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/ProMusic.Core.csproj",
+        "projectUniqueName": "/Users/rashad/Desktop/back/ProMusic/ProMusic.Core/ProMusic.Core.csproj",
         "projectName": "ProMusic.Core",
-        "projectPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/ProMusic.Core.csproj",
+        "projectPath": "/Users/rashad/Desktop/back/ProMusic/ProMusic.Core/ProMusic.Core.csproj",
         "packagesPath": "/Users/rashad/.nuget/packages/",
-        "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/obj/",
+        "outputPath": "/Users/rashad/Desktop/back/ProMusic/ProMusic.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/rashad/.nuget/NuGet/NuGet.Config"
