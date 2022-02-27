@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using ProMusic.Core.Entities;
+using ProMusic.Data.Configurations;
 
 namespace ProMusic.Data
 {
@@ -13,12 +14,12 @@ namespace ProMusic.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Setting> Settings { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfiguration(new BrandConfiguration());
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new BrandConfiguration());
 
-        //    base.OnModelCreating(modelBuilder);
-        //}
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
 //dotnet ef --startup-project ../ProMusic migrations add 

@@ -3,7 +3,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" expanded="True" />
+          <Node name="ProMusic" expanded="True">
+            <Node name="ProMusic.Core" expanded="True" />
+            <Node name="ProMusic.Data" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
