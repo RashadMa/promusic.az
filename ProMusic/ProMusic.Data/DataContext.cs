@@ -13,13 +13,15 @@ namespace ProMusic.Data
         }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new BrandConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
     }
 }
-//dotnet ef --startup-project ../ProMusic migrations add 
+//dotnet ef --startup-project ../ProMusic.Api migrations add 

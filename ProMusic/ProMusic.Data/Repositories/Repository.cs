@@ -25,19 +25,43 @@ namespace ProMusic.Data.Repositories
             _context.Set<TEntity>().Remove(entity);
         }
 
-        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> expression)
+        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> expression, params string[] includes)
         {
-            return _context.Set<TEntity>().Where(expression);
+            var query = _context.Set<TEntity>().AsQueryable();
+            if (includes != null)
+            {
+                foreach (var item in includes)
+                {
+                    query = query.Include(item);
+                }
+            }
+            return query.Where(expression);
         }
 
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression)
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, params string[] includes)
         {
-            return await _context.Set<TEntity>().FirstOrDefaultAsync(expression);
+            var query = _context.Set<TEntity>().AsQueryable();
+            if (includes != null)
+            {
+                foreach (var item in includes)
+                {
+                    query = query.Include(item);
+                }
+            }
+            return await query.FirstOrDefaultAsync(expression);
         }
 
-        public async Task<bool> IsExist(Expression<Func<TEntity, bool>> expression)
+        public async Task<bool> IsExist(Expression<Func<TEntity, bool>> expression, params string[] includes)
         {
-            return await _context.Set<TEntity>().AnyAsync(expression);
+            var query = _context.Set<TEntity>().AsQueryable();
+            if (includes != null)
+            {
+                foreach (var item in includes)
+                {
+                    query = query.Include(item);
+                }
+            }
+            return await query.AnyAsync(expression);
         }
 
         public int Save()

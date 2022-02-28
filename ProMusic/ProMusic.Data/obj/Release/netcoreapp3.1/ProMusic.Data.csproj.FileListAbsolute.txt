@@ -29,3 +29,4 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Data/obj/Release/netcoreapp3.1/ProMusic.Data.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Data/obj/Release/netcoreapp3.1/ProMusic.Data.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Data/obj/Release/netcoreapp3.1/ProMusic.Data.genruntimeconfig.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Data/obj/Release/netcoreapp3.1/ProMusic.Data.csproj.AssemblyReference.cache

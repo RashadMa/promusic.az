@@ -11,7 +11,16 @@ namespace ProMusic.Data.Configurations
         {
             builder
                 .Property(x => x.Name)
-                .HasMaxLength(30);
+                .IsRequired(true)
+                .HasMaxLength(20);
+
+            builder
+                .Property(x => x.CratedAt)
+                .HasDefaultValueSql("GETUTCDATE()");
+
+            builder
+                .Property(x => x.ModifiedAt)
+                .HasDefaultValueSql("GETUTCDATE()");
         }
     }
 }

@@ -12,6 +12,7 @@
     <None Remove="Profiles\" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="DTOs\CategoryDto\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -19,6 +20,7 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Implementations\" />
     <Folder Include="Profiles\" />
+    <Folder Include="DTOs\CategoryDto\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj" />
