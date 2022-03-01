@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using ProMusic.Core.Entities;
+using ProMusic.Data.Repositories;
 using ProMusic.Helper.DTOs;
 using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.Interfaces;
@@ -8,11 +10,13 @@ namespace ProMusic.Helper.Implementations
 {
     public class BrandService : IBrandService
     {
-        public BrandService()
-        {
+        private readonly IBrandRepository _brandRepository;
 
+        public BrandService(IBrandRepository brandRepository)
+        {
+            _brandRepository = brandRepository;
         }
-        public Task<BrandGetDto> CreateAsync(BrandPostDto postDto)
+        public async Task<BrandGetDto> CreateAsync(BrandPostDto postDto)
         {
             throw new NotImplementedException();
         }
