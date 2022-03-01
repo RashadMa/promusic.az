@@ -7,7 +7,7 @@ namespace ProMusic.Helper.Interfaces
 {
     public interface ICategoryService
     {
-        Task CreateAsync(CategoryPostDto postDto);
+        Task<CategoryGetDto> CreateAsync(CategoryPostDto postDto);
         Task UpdateAsync(int id, CategoryPostDto categoryPostDto);
         Task<CategoryGetDto> GetByIdAsync(int id);
         Task<PagenatedListDto<CategoryListItemDto>> GetAll(int page);

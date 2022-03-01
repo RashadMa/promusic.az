@@ -19,6 +19,7 @@ namespace ProMusic.Data
         {
             modelBuilder.ApplyConfiguration(new BrandConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new SettingConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
