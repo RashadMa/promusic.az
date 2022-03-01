@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Data;
 using ProMusic.Data.Repositories;
@@ -17,12 +18,12 @@ namespace ProMusic.Apps.Admin.Controllers
     [ApiController]
     public class BrandsController : Controller
     {
-        private readonly IBrandRepository _brandRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public BrandsController(IBrandRepository brandRepository, IMapper mapper)
+        public BrandsController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _brandRepository = brandRepository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -31,14 +32,14 @@ namespace ProMusic.Apps.Admin.Controllers
         [HttpPost("")]
         public async Task<IActionResult> Create(BrandPostDto brandPostDto)
         {
-            if (await _brandRepository.IsExist(x => x.Name.Trim().ToUpper() == brandPostDto.Name.Trim().ToUpper())) return StatusCode(409);
+            if (await _unitOfWork.BrandRepository.IsExist(x => x.Name.Trim().ToUpper() == brandPostDto.Name.Trim().ToUpper())) return StatusCode(409);
             Brand brand = new Brand
             {
                 Name = brandPostDto.Name,
                 IsDeleted = false
             };
-            await _brandRepository.AddAsync(brand);
-            await _brandRepository.SaveAsync();
+            await _unitOfWork.BrandRepository.AddAsync(brand);
+            await _unitOfWork.SaveAsync();
             return StatusCode(201, new { id = brand.Id });
         }
 
@@ -50,7 +51,7 @@ namespace ProMusic.Apps.Admin.Controllers
         [ProducesResponseType(typeof(BrandGetDto), 200)]
         public async Task<IActionResult> Get(int id)
         {
-            Brand brand = await _brandRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => !x.IsDeleted && x.Id == id);
             if (brand is null) return NotFound();
             BrandGetDto brandGetDto = _mapper.Map<BrandGetDto>(brand);
             return Ok(brandGetDto);
@@ -63,7 +64,7 @@ namespace ProMusic.Apps.Admin.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
-            var query = _brandRepository.GetAll(x => x.IsDeleted == false);
+            var query = _unitOfWork.BrandRepository.GetAll(x => x.IsDeleted == false);
             query = query.Where(x => x.IsDeleted);
             ListDto<BrandListItemDto> listDto = new ListDto<BrandListItemDto>
             {
@@ -83,11 +84,11 @@ namespace ProMusic.Apps.Admin.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> Edit(int id, BrandPostDto brandPostDto)
         {
-            Brand brand = await _brandRepository.GetAsync(x => x.Id == id);
+            Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id);
             if (brand is null) return NotFound();
             brand.Name = brandPostDto.Name;
             brand.ModifiedAt = DateTime.UtcNow;
-            await _brandRepository.SaveAsync();
+            await _unitOfWork.SaveAsync();
             return NoContent();
         }
 

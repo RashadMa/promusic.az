@@ -63,15 +63,5 @@ namespace ProMusic.Data.Repositories
             }
             return await query.AnyAsync(expression);
         }
-
-        public int Save()
-        {
-            return _context.SaveChanges();
-        }
-
-        public async Task<int> SaveAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
     }
 }

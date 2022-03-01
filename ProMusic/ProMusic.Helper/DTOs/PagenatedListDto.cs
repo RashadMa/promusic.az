@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ProMusic.Helper.DTOs
 {
-    public class PagenatedListDto<TItem >:List<TItem>
+    public class PagenatedListDto<TItem>
     {
         public PagenatedListDto(List<TItem> items, int count, int pageIndex, int pageSize)
         {

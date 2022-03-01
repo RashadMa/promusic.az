@@ -77,7 +77,6 @@
 /Users/rashad/Desktop/back/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.genruntimeconfig.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/ProMusic.Api
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/ProMusic.Api.deps.json
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/ProMusic.Api.runtimeconfig.json
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/ProMusic.Api.runtimeconfig.dev.json
@@ -152,3 +151,4 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.genruntimeconfig.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/ProMusic.Api

@@ -12,7 +12,5 @@ namespace ProMusic.Data.Repositories
         IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> expression, params string[] includes);
         Task<bool> IsExist(Expression<Func<TEntity, bool>> expression, params string[] includes);
         void Delete(TEntity entity);
-        Task<int> SaveAsync();
-        int Save();
     }
 }

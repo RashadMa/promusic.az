@@ -27,7 +27,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
             try
             {
                 var category = await _categoryService.CreateAsync(postDto);
-                return StatusCode(201, postDto);
+                return StatusCode(201, category);
             }
             catch(RecordDuplicatedException exc)
             {

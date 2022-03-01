@@ -13,9 +13,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProMusic.Core;
+using ProMusic.Core.Repositories;
 using ProMusic.Data;
 using ProMusic.Data.Repositories;
 using ProMusic.Helper.DTOs.BrandDto;
+using ProMusic.Helper.DTOs.CategoryDto;
+using ProMusic.Helper.Implementations;
+using ProMusic.Helper.Interfaces;
 using ProMusic.Helper.Profiles;
 
 namespace ProMusic.Api
@@ -32,11 +37,12 @@ namespace ProMusic.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
-            }).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<BrandPostDtoValidator>());
+            }).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<CategoryPostDtoValidator>());
 
             services.AddSwaggerGen(c =>
             {

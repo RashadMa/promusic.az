@@ -12,8 +12,10 @@ namespace ProMusic.Helper.DTOs.BrandDto
         public BrandPostDtoValidator()
         {
             RuleFor(x => x.Name)
-                .MaximumLength(20).WithMessage("Max length must be less than 20 character")
-                .NotEmpty().WithMessage("Name is required");
+                .MaximumLength(20)
+                .WithMessage("Max length must be less than 20 character")
+                .NotEmpty()
+                .WithMessage("Name is required");
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Core.Repositories;
 using ProMusic.Helper.DTOs;
@@ -13,24 +14,22 @@ namespace ProMusic.Helper.Implementations
 {
     public class CategoryService : ICategoryService
     {
-        private readonly ICategoryRepository _categoryRepository;
-        private readonly ISettingRepository _settingRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryService(ICategoryRepository categoryRepository, ISettingRepository settingRepository)
+        public CategoryService(IUnitOfWork unitOfWork)
         {
-            _settingRepository = settingRepository;
-            _categoryRepository = categoryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<CategoryGetDto> CreateAsync(CategoryPostDto postDto)
         {
-            if (await _categoryRepository.IsExist(x => x.Name.ToUpper().Trim() == postDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
+            if (await _unitOfWork.CategoryRepository.IsExist(x => x.Name.ToUpper().Trim() == postDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
             Category category = new Category
             {
                 Name = postDto.Name
             };
-            await _categoryRepository.AddAsync(category);
-            await _categoryRepository.SaveAsync();
+            await _unitOfWork.CategoryRepository.AddAsync(category);
+            await _unitOfWork.SaveAsync();
             return new CategoryGetDto
             {
                 Id = category.Id,
@@ -40,16 +39,16 @@ namespace ProMusic.Helper.Implementations
 
         public async Task Delete(int id)
         {
-            Category category = await _categoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            Category category = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (category is null) throw new NotFoundException("Item not found");
             category.IsDeleted = true;
-            await _categoryRepository.SaveAsync();
+            await _unitOfWork.SaveAsync();
         }
 
         public async Task<PagenatedListDto<CategoryListItemDto>> GetAll(int page)
         {
-            var query = _categoryRepository.GetAll(x => !x.IsDeleted);
-            var pageSizeStr = await _settingRepository.GetValueAsync("PageSize");
+            var query = _unitOfWork.CategoryRepository.GetAll(x => !x.IsDeleted);
+            var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
             List<CategoryListItemDto> items = query
                 .Skip((page - 1) * pageSize)
@@ -67,7 +66,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<CategoryGetDto> GetByIdAsync(int id)
         {
-            Category category = await _categoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            Category category = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (category is null) throw new NotFoundException("Item not found");
             CategoryGetDto categoryGetDto = new CategoryGetDto
             {
@@ -79,11 +78,11 @@ namespace ProMusic.Helper.Implementations
 
         public async Task UpdateAsync(int id, CategoryPostDto categoryPostDto)
         {
-            Category category = await _categoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            Category category = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (category is null) throw new NotFoundException("Item not found");
-            if (await _categoryRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == categoryPostDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
+            if (await _unitOfWork.CategoryRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == categoryPostDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
             category.Name = categoryPostDto.Name;
-            await _categoryRepository.SaveAsync();
+            await _unitOfWork.SaveAsync();
         }
     }
 }
