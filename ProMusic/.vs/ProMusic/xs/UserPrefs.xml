@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Profiles/MapProfile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/DTOs/BrandDto/BrandPostDto.cs">
     <Files>
-      <File FileName="ProMusic.Helper/Profiles/MapProfile.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Data/Configurations/ProductConfiguration.cs" Line="30" Column="41" />
+      <File FileName="ProMusic.Data/Configurations/CategoryConfiguration.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Data/Configurations/BrandConfiguration.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Helper/DTOs/BrandDto/BrandPostDto.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
             <Node name="ProMusic.Helper" expanded="True">
-              <Node name="Profiles" expanded="True">
-                <Node name="MapProfile.cs" selected="True" />
+              <Node name="DTOs" expanded="True">
+                <Node name="BrandDto" expanded="True">
+                  <Node name="BrandPostDto.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

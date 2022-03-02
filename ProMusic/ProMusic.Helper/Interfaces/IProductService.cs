@@ -7,9 +7,9 @@ namespace ProMusic.Helper.Interfaces
 {
     public interface IProductService
     {
-        Task<ProductPostDto> CreateAsync(ProductPostDto postDto);
+        Task<ProductGetDto> CreateAsync(ProductPostDto postDto);
         Task UpdateAsync(int id, ProductPostDto productPostDto);
-        Task<ProductPostDto> GetByIdAsync(int id);
+        Task<ProductGetDto> GetByIdAsync(int id);
         Task<PagenatedListDto<ProductListItemDto>> GetAll(int page);
         Task Delete(int id);
     }

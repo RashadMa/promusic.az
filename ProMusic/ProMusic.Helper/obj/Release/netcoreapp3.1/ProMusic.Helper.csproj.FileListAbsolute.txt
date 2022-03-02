@@ -20,6 +20,7 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/bin/Release/netcoreapp3.1/ProMusic.Data.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/bin/Release/netcoreapp3.1/ProMusic.Data.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/bin/Release/netcoreapp3.1/ProMusic.Core.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/obj/Release/netcoreapp3.1/ProMusic.Helper.csproj.AssemblyReference.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/obj/Release/netcoreapp3.1/ProMusic.Helper.GeneratedMSBuildEditorConfig.editorconfig
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/obj/Release/netcoreapp3.1/ProMusic.Helper.AssemblyInfoInputs.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/obj/Release/netcoreapp3.1/ProMusic.Helper.AssemblyInfo.cs
