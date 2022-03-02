@@ -14,8 +14,7 @@ using ProMusic.Helper.DTOs.BrandDto;
 
 namespace ProMusic.Apps.Admin.Controllers
 {
-    [Route("admin/api/[controller]")]
-    [ApiController]
+    [Route("admin/api/[controller]"), ApiController]
     public class BrandsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -76,13 +75,13 @@ namespace ProMusic.Apps.Admin.Controllers
 
         #endregion
 
-        #region Edit
+        #region Update
 
         [HttpPut("{id}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public async Task<IActionResult> Edit(int id, BrandPostDto brandPostDto)
+        public async Task<IActionResult> Update(int id, BrandPostDto brandPostDto)
         {
             Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id);
             if (brand is null) return NotFound();
@@ -91,6 +90,12 @@ namespace ProMusic.Apps.Admin.Controllers
             await _unitOfWork.SaveAsync();
             return NoContent();
         }
+
+        #endregion
+
+        #region Delete
+
+
 
         #endregion
     }

@@ -36,6 +36,16 @@ namespace ProMusic.Data.Configurations
             builder
                 .Property(x => x.ModifiedAt)
                 .HasDefaultValueSql("GETUTCDATE()");
+
+            builder
+                .HasOne(x => x.Category)
+                .WithMany(x => x.Products)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder
+                .HasOne(x => x.Brand)
+                .WithMany(x => x.Products)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

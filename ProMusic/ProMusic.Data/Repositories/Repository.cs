@@ -15,28 +15,16 @@ namespace ProMusic.Data.Repositories
             _context = context;
         }
 
+        #region AddAsync
+
         public async Task AddAsync(TEntity entity)
         {
             await _context.Set<TEntity>().AddAsync(entity);
         }
 
-        public void Delete(TEntity entity)
-        {
-            _context.Set<TEntity>().Remove(entity);
-        }
+        #endregion
 
-        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> expression, params string[] includes)
-        {
-            var query = _context.Set<TEntity>().AsQueryable();
-            if (includes != null)
-            {
-                foreach (var item in includes)
-                {
-                    query = query.Include(item);
-                }
-            }
-            return query.Where(expression);
-        }
+        #region Get
 
         public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, params string[] includes)
         {
@@ -51,6 +39,27 @@ namespace ProMusic.Data.Repositories
             return await query.FirstOrDefaultAsync(expression);
         }
 
+        #endregion
+
+        #region GetAll
+
+        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> expression, params string[] includes)
+        {
+            var query = _context.Set<TEntity>().AsQueryable();
+            if (includes != null)
+            {
+                foreach (var item in includes)
+                {
+                    query = query.Include(item);
+                }
+            }
+            return query.Where(expression);
+        }
+
+        #endregion
+
+        #region IsExist
+
         public async Task<bool> IsExist(Expression<Func<TEntity, bool>> expression, params string[] includes)
         {
             var query = _context.Set<TEntity>().AsQueryable();
@@ -63,5 +72,16 @@ namespace ProMusic.Data.Repositories
             }
             return await query.AnyAsync(expression);
         }
+
+        #endregion
+
+        #region Delete
+
+        public void Delete(TEntity entity)
+        {
+            _context.Set<TEntity>().Remove(entity);
+        }
+
+        #endregion
     }
 }

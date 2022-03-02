@@ -16,7 +16,7 @@ namespace ProMusic.Helper.Implementations
             _unitOfWork = unitOfWork;
         }
 
-        public Task<ProductGetDto> CreateAsync(ProductPostDto postDto)
+        public Task<ProductPostDto> CreateAsync(ProductPostDto postDto)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace ProMusic.Helper.Implementations
             throw new NotImplementedException();
         }
 
-        public Task<ProductGetDto> GetByIdAsync(int id)
+        public Task<ProductPostDto> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }

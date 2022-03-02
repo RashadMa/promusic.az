@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProMusic.Api.ServiceExtentions;
 using ProMusic.Core;
 using ProMusic.Core.Repositories;
 using ProMusic.Data;
@@ -77,6 +78,8 @@ namespace ProMusic.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ExceptionHandler();
 
             app.UseHttpsRedirection();
 

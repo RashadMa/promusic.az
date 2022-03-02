@@ -9,7 +9,7 @@ using ProMusic.Helper.Interfaces;
 
 namespace ProMusic.Api.Apps.Admin.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]"), ApiController]
     public class CategoriesController : Controller
     {
         private readonly ICategoryService _categoryService;
@@ -24,15 +24,8 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         [HttpPost("")]
         public async Task<IActionResult> Create(CategoryPostDto postDto)
         {
-            try
-            {
-                var category = await _categoryService.CreateAsync(postDto);
-                return StatusCode(201, category);
-            }
-            catch(RecordDuplicatedException exc)
-            {
-                return StatusCode(409, exc.Message);
-            }
+            var category = await _categoryService.CreateAsync(postDto);
+            return StatusCode(201, category);
         }
 
         #endregion
@@ -42,14 +35,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            try
-            {
-                return Ok(await _categoryService.GetByIdAsync(id));
-            }
-            catch (NotFoundException exc)
-            {
-                return NotFound(exc.Message);
-            }
+            return Ok(await _categoryService.GetByIdAsync(id));
         }
 
         #endregion
@@ -59,14 +45,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
-            try
-            {
-                return Ok(await _categoryService.GetAll(page));
-            }
-            catch(System.Exception)
-            {
-                return StatusCode(500);
-            }
+            return Ok(await _categoryService.GetAll(page));
         }
 
         #endregion
@@ -76,19 +55,8 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, CategoryPostDto categoryPostDto)
         {
-            try
-            {
-                await _categoryService.UpdateAsync(id, categoryPostDto);
-                return NoContent();
-            }
-            catch(NotFoundException exc)
-            {
-                return NotFound(exc.Message);
-            }
-            catch(RecordDuplicatedException exc)
-            {
-                return Conflict(exc.Message);
-            }
+            await _categoryService.UpdateAsync(id, categoryPostDto);
+            return NoContent();
         }
 
         #endregion
@@ -98,15 +66,8 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            try
-            {
-                await _categoryService.Delete(id);
-                return NoContent();
-            }
-            catch(NotFoundException exc)
-            {
-                return NotFound(exc.Message);
-            }
+            await _categoryService.Delete(id);
+            return NoContent();
         }
 
         #endregion
