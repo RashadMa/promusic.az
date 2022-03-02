@@ -14,12 +14,14 @@ namespace ProMusic.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new BrandConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new SettingConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

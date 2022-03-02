@@ -10,6 +10,7 @@ namespace ProMusic.Core
         ICategoryRepository CategoryRepository { get; }
         ISettingRepository SettingRepository { get; }
         IBrandRepository BrandRepository { get; }
+        IProductRepository ProductRepository { get; }
 
         int Save();
         Task<int> SaveAsync();

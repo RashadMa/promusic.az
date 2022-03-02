@@ -1,9 +1,20 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/Configurations/ProductConfiguration.cs">
+    <Files>
+      <File FileName="ProMusic.Data/DataContext.cs" Line="30" Column="62" />
+      <File FileName="ProMusic.Data/Configurations/ProductConfiguration.cs" Line="30" Column="49" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node />
+          <Node name="ProMusic" expanded="True">
+            <Node name="ProMusic.Data" expanded="True">
+              <Node name="Configurations" expanded="True">
+                <Node name="ProductConfiguration.cs" selected="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

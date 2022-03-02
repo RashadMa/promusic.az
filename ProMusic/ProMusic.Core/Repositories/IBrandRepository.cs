@@ -7,7 +7,6 @@ using ProMusic.Core.Entities;
 namespace ProMusic.Data.Repositories
 {
     public interface IBrandRepository:IRepository<Brand>
-    {
-        
+    {        
     }
 }
