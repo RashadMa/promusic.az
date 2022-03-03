@@ -79,6 +79,29 @@ namespace ProMusic.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("ProMusic.Core.Entities.Information", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Desc")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Informations");
+                });
+
             modelBuilder.Entity("ProMusic.Core.Entities.Product", b =>
                 {
                     b.Property<int>("Id")

@@ -1,27 +1,9 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Profiles/MapProfile.cs">
-    <Files>
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/SlidersController.cs" Line="68" Column="33" NotebookId="2" />
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" Line="72" Column="19" NotebookId="3" />
-      <File FileName="ProMusic.Helper/Profiles/MapProfile.cs" Line="1" Column="1" NotebookId="3" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Api" expanded="True">
-              <Node name="Apps" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="ProMusic.Helper" expanded="True">
-              <Node name="Profiles" expanded="True">
-                <Node name="MapProfile.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ProMusic" selected="True" />
         </State>
       </Pad>
     </Pads>

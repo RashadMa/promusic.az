@@ -16,6 +16,7 @@
     <None Remove="Exceptions\" />
     <None Remove="DTOs\ProductDto\" />
     <None Remove="DTOs\SliderDto\" />
+    <None Remove="DTOs\InformationDto\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -27,6 +28,7 @@
     <Folder Include="Exceptions\" />
     <Folder Include="DTOs\ProductDto\" />
     <Folder Include="DTOs\SliderDto\" />
+    <Folder Include="DTOs\InformationDto\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj" />
