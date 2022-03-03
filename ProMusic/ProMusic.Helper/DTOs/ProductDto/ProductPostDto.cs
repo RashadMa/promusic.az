@@ -24,11 +24,15 @@ namespace ProMusic.Helper.DTOs.ProductDto
 
             RuleFor(x => x.SalePrice)
                 .NotEmpty()
-                .WithMessage("Sale price is required!");
+                .WithMessage("Sale price is required!")
+                .GreaterThanOrEqualTo(0)
+                .WithMessage("Sale price cannot be 0");
 
             RuleFor(x => x.CostPrice)
                 .NotEmpty()
-                .WithMessage("Cost price is required!");
+                .WithMessage("Cost price is required!")
+                .GreaterThanOrEqualTo(0)
+                .WithMessage("Cost price cannot be 0");
         }
     }
 }

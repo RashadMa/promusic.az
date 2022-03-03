@@ -13,6 +13,7 @@ namespace ProMusic.Data
         private SettingRepository _settingRepository;
         private BrandRepository _brandRepository;
         private ProductRepository _productRepository;
+        private SliderRepository _sliderRepository;
 
         public UnitOfWork(DataContext context)
         {
@@ -23,6 +24,7 @@ namespace ProMusic.Data
         public ISettingRepository SettingRepository => _settingRepository ?? new SettingRepository(_context);
         public IBrandRepository BrandRepository => _brandRepository ?? new BrandRepository(_context);
         public IProductRepository ProductRepository => _productRepository ?? new ProductRepository(_context);
+        public ISliderRepository SliderRepository => _sliderRepository ?? new SliderRepository(_context);
 
         public int Save()
         {

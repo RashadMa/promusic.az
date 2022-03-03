@@ -4,6 +4,7 @@ using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.CategoryDto;
 using ProMusic.Helper.DTOs.ProductDto;
+using ProMusic.Helper.DTOs.SliderDto;
 
 namespace ProMusic.Helper.Profiles
 {
@@ -32,6 +33,14 @@ namespace ProMusic.Helper.Profiles
             CreateMap<Brand, BrandGetDto>();
             CreateMap<BrandPostDto, Brand>();
             CreateMap<Brand, BrandListItemDto>();
+
+            #endregion
+
+            #region MyRegion
+
+            CreateMap<Slider, SliderGetDto>();
+            CreateMap<SliderPostDto, Slider>();
+            CreateMap<Slider, SliderListItemDto>();
 
             #endregion
         }
