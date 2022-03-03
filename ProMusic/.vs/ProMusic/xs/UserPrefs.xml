@@ -1,21 +1,34 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/DTOs/BrandDto/BrandPostDto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/DTOs/ProductDto/ProductGetDto.cs">
     <Files>
-      <File FileName="ProMusic.Data/Configurations/ProductConfiguration.cs" Line="30" Column="41" />
-      <File FileName="ProMusic.Data/Configurations/CategoryConfiguration.cs" Line="1" Column="1" />
-      <File FileName="ProMusic.Data/Configurations/BrandConfiguration.cs" Line="1" Column="1" />
-      <File FileName="ProMusic.Helper/DTOs/BrandDto/BrandPostDto.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Helper/DTOs/ProductDto/ProductPostDto.cs" Line="13" Column="30" />
+      <File FileName="ProMusic.Core/Entities/Product.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Helper/Implementations/ProductService.cs" Line="34" Column="31" />
+      <File FileName="ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Helper/DTOs/ProductDto/ProductGetDto.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Helper" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="BrandDto" expanded="True">
-                  <Node name="BrandPostDto.cs" selected="True" />
+            <Node name="ProMusic.Api" expanded="True">
+              <Node name="Apps" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
+            </Node>
+            <Node name="ProMusic.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="ProMusic.Helper" expanded="True">
+              <Node name="DTOs" expanded="True">
+                <Node name="ProductDto" expanded="True">
+                  <Node name="ProductGetDto.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Implementations" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -24,9 +37,12 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" line="24" column="1" />
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/Implementations/ProductService.cs" relfile="ProMusic.Helper/Implementations/ProductService.cs" line="29" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

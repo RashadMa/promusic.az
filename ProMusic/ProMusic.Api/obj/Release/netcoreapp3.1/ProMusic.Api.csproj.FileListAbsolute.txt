@@ -136,6 +136,7 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/ProMusic.Helper.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/ProMusic.Core.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/ProMusic.Data.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Release/netcoreapp3.1/ProMusic.Api.csproj.AssemblyReference.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Release/netcoreapp3.1/ProMusic.Api.GeneratedMSBuildEditorConfig.editorconfig
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Release/netcoreapp3.1/ProMusic.Api.AssemblyInfoInputs.cache
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Release/netcoreapp3.1/ProMusic.Api.AssemblyInfo.cs

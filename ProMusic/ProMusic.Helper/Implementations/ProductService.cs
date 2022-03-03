@@ -37,6 +37,8 @@ namespace ProMusic.Helper.Implementations
                 Name = product.Name,
                 SalePrice = product.SalePrice,
                 CostPrice = product.CostPrice,
+                BrandId = product.BrandId,
+                CategoryId = product.CategoryId,
             };
         }
 

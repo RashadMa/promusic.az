@@ -3,6 +3,7 @@ using AutoMapper;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.CategoryDto;
+using ProMusic.Helper.DTOs.ProductDto;
 
 namespace ProMusic.Helper.Profiles
 {
@@ -12,7 +13,9 @@ namespace ProMusic.Helper.Profiles
         {
             #region Product
 
-            
+            CreateMap<Product, ProductGetDto>();
+            CreateMap<ProductPostDto, Product>();
+            CreateMap<Product, ProductListItemDto>();
 
             #endregion
 

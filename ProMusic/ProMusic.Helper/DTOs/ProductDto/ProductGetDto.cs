@@ -12,5 +12,7 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public bool IsDeleted { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
+        public int BrandId { get; set; }
+        public int CategoryId { get; set; }
     }
 }

@@ -9,6 +9,8 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public decimal SalePrice { get; set; }
         public decimal CostPrice { get; set; }
         public decimal DiscountPercent { get; set; }
+        public int BrandId { get; set; }
+        public int CategoryId { get; set; }
     }
     public class ProductPostDtoValidator : AbstractValidator<ProductPostDto>
     {
