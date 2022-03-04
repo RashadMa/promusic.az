@@ -44,6 +44,7 @@ namespace ProMusic.Api
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<ISliderService, SliderService>();
             services.AddScoped<IInformationService, InformationService>();
+            services.AddScoped<ISettingService, SettingService>();
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));

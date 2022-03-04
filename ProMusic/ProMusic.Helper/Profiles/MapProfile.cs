@@ -5,6 +5,7 @@ using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.CategoryDto;
 using ProMusic.Helper.DTOs.InformationDto;
 using ProMusic.Helper.DTOs.ProductDto;
+using ProMusic.Helper.DTOs.SettingDto;
 using ProMusic.Helper.DTOs.SliderDto;
 
 namespace ProMusic.Helper.Profiles
@@ -50,6 +51,14 @@ namespace ProMusic.Helper.Profiles
             CreateMap<Information, InformationGetDto>();
             CreateMap<InformationPostDto, Information>();
             CreateMap<Information, InformationListItemDto>();
+
+            #endregion
+
+            #region Setting
+
+            CreateMap<Setting, SettingGetDto>();
+            CreateMap<SettingPostDto, Setting>();
+            CreateMap<Setting, SettingListItemDto>();
 
             #endregion
         }

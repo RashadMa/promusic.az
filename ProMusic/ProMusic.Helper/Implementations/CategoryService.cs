@@ -78,12 +78,12 @@ namespace ProMusic.Helper.Implementations
 
         #region Update
 
-        public async Task UpdateAsync(int id, CategoryPostDto categoryPostDto)
+        public async Task UpdateAsync(int id, CategoryPutDto categoryPutDto)
         {
             Category category = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (category is null) throw new NotFoundException("Item not found");
-            if (await _unitOfWork.CategoryRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == categoryPostDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
-            category.Name = categoryPostDto.Name;
+            if (await _unitOfWork.CategoryRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == categoryPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
+            category.Name = categoryPutDto.Name;
             await _unitOfWork.SaveAsync();
         }
 

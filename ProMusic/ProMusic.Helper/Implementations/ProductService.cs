@@ -81,14 +81,16 @@ namespace ProMusic.Helper.Implementations
 
         #region Update
 
-        public async Task UpdateAsync(int id, ProductPostDto productPostDto)
+        public async Task UpdateAsync(int id, ProductPutDto productPutDto)
         {
             Product product = await _unitOfWork.ProductRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (product is null) throw new NotFoundException("Item not found");
-            if (await _unitOfWork.ProductRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == productPostDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Product already exist");
-            product.Name = productPostDto.Name;
-            product.SalePrice = productPostDto.SalePrice;
-            product.DiscountPercent = productPostDto.DiscountPercent;
+            if (await _unitOfWork.ProductRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == productPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Product already exist");
+            product.Name = productPutDto.Name;
+            product.SalePrice = productPutDto.SalePrice;
+            product.DiscountPercent = productPutDto.DiscountPercent;
+            product.BrandId = productPutDto.BrandId;
+            product.CategoryId = productPutDto.CategoryId;
             await _unitOfWork.SaveAsync();
         }
 

@@ -16,7 +16,7 @@ namespace ProMusic.Helper.DTOs.ProductDto
     {
         public ProductPostDtoValidator()
         {
-            RuleFor(x => x.Name)
+            RuleFor(x => x.Name)                
                 .MaximumLength(20)
                 .WithMessage("Max length must be less than 20 character")
                 .NotEmpty()

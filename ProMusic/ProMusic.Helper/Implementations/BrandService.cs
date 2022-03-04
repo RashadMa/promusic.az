@@ -78,12 +78,12 @@ namespace ProMusic.Helper.Implementations
 
         #region Update
 
-        public async Task UpdateAsync(int id, BrandPostDto brandPostDto)
+        public async Task UpdateAsync(int id, BrandPutDto brandPutDto)
         {
             Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (brand is null) throw new NotFoundException("Item not found");
-            if (await _unitOfWork.BrandRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == brandPostDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Brand already exist");
-            brand.Name = brandPostDto.Name;
+            if (await _unitOfWork.BrandRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == brandPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Brand already exist");
+            brand.Name = brandPutDto.Name;
             await _unitOfWork.SaveAsync();
         }
 
