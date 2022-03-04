@@ -14,6 +14,8 @@
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
     <None Remove="Swashbuckle.AspNetCore" />
     <None Remove="ServiceExtentions\" />
+    <None Remove="Apps\Member\" />
+    <None Remove="Apps\Member\Controller\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
@@ -24,5 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ServiceExtentions\" />
+    <Folder Include="Apps\Member\" />
+    <Folder Include="Apps\Member\Controllers\" />
   </ItemGroup>
 </Project>
