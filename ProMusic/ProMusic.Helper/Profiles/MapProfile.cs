@@ -18,7 +18,9 @@ namespace ProMusic.Helper.Profiles
 
             CreateMap<Product, ProductGetDto>();
             CreateMap<ProductPostDto, Product>();
+            CreateMap<ProductPutDto, Product>();
             CreateMap<Product, ProductListItemDto>();
+            CreateMap<Product, ProductDto>();
 
             #endregion
 
@@ -26,7 +28,9 @@ namespace ProMusic.Helper.Profiles
 
             CreateMap<Category, CategoryGetDto>();
             CreateMap<CategoryPostDto, Category>();
+            CreateMap<CategoryPutDto, Category>();
             CreateMap<Category, CategoryListItemDto>();
+            CreateMap<Category, CategoryDto>();
 
             #endregion
 
@@ -34,7 +38,9 @@ namespace ProMusic.Helper.Profiles
 
             CreateMap<Brand, BrandGetDto>();
             CreateMap<BrandPostDto, Brand>();
+            CreateMap<BrandPutDto, Brand>();
             CreateMap<Brand, BrandListItemDto>();
+            CreateMap<Brand, BrandDto>();
 
             #endregion
 
@@ -43,6 +49,7 @@ namespace ProMusic.Helper.Profiles
             CreateMap<Slider, SliderGetDto>();
             CreateMap<SliderPostDto, Slider>();
             CreateMap<Slider, SliderListItemDto>();
+            CreateMap<Slider, SliderDto>();
 
             #endregion
 
@@ -51,6 +58,7 @@ namespace ProMusic.Helper.Profiles
             CreateMap<Information, InformationGetDto>();
             CreateMap<InformationPostDto, Information>();
             CreateMap<Information, InformationListItemDto>();
+            CreateMap<Information, InformationDto>();
 
             #endregion
 

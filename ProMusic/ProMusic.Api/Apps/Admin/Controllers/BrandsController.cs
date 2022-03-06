@@ -52,7 +52,6 @@ namespace ProMusic.Apps.Admin.Controllers
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _brandService.GetAll(page));
-
         }
 
         #endregion

@@ -3,7 +3,20 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" selected="True" />
+          <Node name="ProMusic" expanded="True">
+            <Node name="ProMusic.Api" expanded="True">
+              <Node name="Apps" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="SlidersController.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="Member" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
