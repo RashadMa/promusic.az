@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Helper.DTOs.CategoryDto;
 using ProMusic.Helper.Exceptions;
@@ -41,8 +42,8 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #endregion
 
         #region GetAll
-
         [HttpGet("")]
+        [Authorize]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _categoryService.GetAll(page));

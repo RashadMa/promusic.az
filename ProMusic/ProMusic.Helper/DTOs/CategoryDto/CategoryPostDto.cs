@@ -6,6 +6,7 @@ namespace ProMusic.Helper.DTOs.CategoryDto
     public class CategoryPostDto
     {
         public string Name { get; set; }
+        public bool IsSubCategory { get; set; }
     }
     public class CategoryPostDtoValidator : AbstractValidator<CategoryPostDto>
     {
@@ -16,6 +17,10 @@ namespace ProMusic.Helper.DTOs.CategoryDto
                 .WithMessage("Max length must be less than 20 character")
                 .NotEmpty()
                 .WithMessage("Name is required");
+
+            RuleFor(x => x.IsSubCategory)
+                .NotEmpty()
+                .WithMessage("You must choose sub-category");
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProMusic.Core.Entities;
 using ProMusic.Data.Configurations;
 
 namespace ProMusic.Data
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -17,6 +18,7 @@ namespace ProMusic.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Information> Informations { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,9 +28,11 @@ namespace ProMusic.Data
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new SliderConfiguration());
             modelBuilder.ApplyConfiguration(new InformationConfiguration());
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
     }
 }
 //dotnet ef --startup-project ../ProMusic.Api migrations add 
+//dotnet ef --startup-project ../ProMusic.Api database update

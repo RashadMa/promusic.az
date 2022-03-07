@@ -21,6 +21,10 @@ namespace ProMusic.Data.Configurations
             builder
                 .Property(x => x.ModifiedAt)
                 .HasDefaultValueSql("GETUTCDATE()");
+
+            builder
+                .Property(x => x.IsSubCategory)
+                .IsRequired(true);
         }
     }
 }

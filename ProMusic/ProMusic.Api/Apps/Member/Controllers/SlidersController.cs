@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Helper.Interfaces;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace ProMusic.Api.Apps.Member.Controllers
 {
-    [Route("manage/api/[controller]")]
+    [Route("member/api/[controller]")]
     public class SlidersController : Controller
     {
         private readonly ISliderService _sliderService;

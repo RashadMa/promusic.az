@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Helper.DTOs.ProductDto;
 using ProMusic.Helper.Interfaces;
@@ -9,7 +10,6 @@ using ProMusic.Helper.Interfaces;
 namespace ProMusic.Api.Apps.Admin.Controllers
 {
     [Route("admin/api/[controller]"), ApiController]
-
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;

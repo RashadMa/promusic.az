@@ -1,21 +1,17 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/DataContext.cs">
+    <Files>
+      <File FileName="ProMusic.Data/DataContext.cs" Line="37" Column="62" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Api" expanded="True">
-              <Node name="Apps" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True">
-                    <Node name="SlidersController.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="Member" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                </Node>
-              </Node>
+            <Node name="ProMusic.Data" expanded="True">
+              <Node name="Migrations" expanded="True" />
+              <Node name="DataContext.cs" selected="True" />
             </Node>
+            <Node name="ProMusic.Helper" expanded="True" />
           </Node>
         </State>
       </Pad>

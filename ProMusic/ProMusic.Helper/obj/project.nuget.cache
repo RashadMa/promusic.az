@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "S9bdWMR6vYtg0ebvIQpab/eRgH1ix51BgLY0r9toSMKh/oObHwHwdbSiYn5nAZOjXH4U1sIqra+etVOJcyJgqw==",
+  "dgSpecHash": "h70Rg2Z+MnvECmpreh+YQeR3T4Dsho9KlzCnP003sL/e50txmHx7CekHgvRr1cESFCN7kMkw/H6FgTRhTZcNTw==",
   "success": true,
   "projectFilePath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/ProMusic.Helper.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,10 @@
     "/Users/rashad/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
     "/Users/rashad/.nuget/packages/fluentvalidation.aspnetcore/10.3.6/fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
     "/Users/rashad/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.3.6/fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.22/microsoft.aspnetcore.authentication.jwtbearer.3.1.22.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.22/microsoft.aspnetcore.cryptography.internal.3.1.22.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.22/microsoft.aspnetcore.cryptography.keyderivation.3.1.22.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/3.1.22/microsoft.aspnetcore.identity.entityframeworkcore.3.1.22.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.bcl.hashcode/1.1.1/microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
@@ -25,6 +29,8 @@
     "/Users/rashad/.nuget/packages/microsoft.extensions.configuration.binder/3.1.22/microsoft.extensions.configuration.binder.3.1.22.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.extensions.dependencyinjection/3.1.22/microsoft.extensions.dependencyinjection.3.1.22.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/microsoft.extensions.identity.core/3.1.22/microsoft.extensions.identity.core.3.1.22.nupkg.sha512",
+    "/Users/rashad/.nuget/packages/microsoft.extensions.identity.stores/3.1.22/microsoft.extensions.identity.stores.3.1.22.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.extensions.logging/3.1.22/microsoft.extensions.logging.3.1.22.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.22/microsoft.extensions.logging.abstractions.3.1.22.nupkg.sha512",
     "/Users/rashad/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",

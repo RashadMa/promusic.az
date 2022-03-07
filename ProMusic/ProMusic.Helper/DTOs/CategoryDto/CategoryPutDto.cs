@@ -6,6 +6,7 @@ namespace ProMusic.Helper.DTOs.CategoryDto
     public class CategoryPutDto
     {
         public string Name { get; set; }
+        public bool IsSubCategory { get; set; }
     }
     public class CategoryPutDtoValidator : AbstractValidator<CategoryPutDto>
     {

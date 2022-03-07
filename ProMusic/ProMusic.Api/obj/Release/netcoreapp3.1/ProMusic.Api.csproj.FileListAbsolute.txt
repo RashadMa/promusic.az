@@ -85,6 +85,10 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/FluentValidation.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/FluentValidation.AspNetCore.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/FluentValidation.DependencyInjectionExtensions.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Data.SqlClient.dll
@@ -100,6 +104,8 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.Logging.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Release/netcoreapp3.1/Microsoft.Extensions.Options.dll
