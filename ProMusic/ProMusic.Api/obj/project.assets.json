@@ -6316,7 +6316,7 @@
       "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/rashad/.nuget/NuGet/NuGet.Config"
+        "/Users/rashad/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

@@ -42,8 +42,8 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #endregion
 
         #region GetAll
+
         [HttpGet("")]
-        [Authorize]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _categoryService.GetAll(page));
