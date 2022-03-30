@@ -10,16 +10,8 @@ namespace ProMusic.Data.Configurations
         public void Configure(EntityTypeBuilder<Slider> builder)
         {
             builder
-                .Property(x => x.Title1)
+                .Property(x => x.Title)
                 .HasMaxLength(30);
-
-            builder
-                .Property(x => x.Title2)
-                .HasMaxLength(30);
-
-            builder
-                .Property(x => x.Desc)
-                .HasMaxLength(100);
 
             builder
                 .Property(x => x.BtnText)

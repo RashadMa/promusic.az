@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentValidation;
+using Microsoft.AspNetCore.Http;
 
 namespace ProMusic.Helper.DTOs.CategoryDto
 {
@@ -7,6 +8,7 @@ namespace ProMusic.Helper.DTOs.CategoryDto
     {
         public string Name { get; set; }
         public bool IsSubCategory { get; set; }
+        public IFormFile Photo { get; set; }
     }
     public class CategoryPutDtoValidator : AbstractValidator<CategoryPutDto>
     {

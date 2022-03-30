@@ -33,9 +33,7 @@ namespace ProMusic.Helper.Implementations
             return new SliderGetDto
             {
                 Id = slider.Id,
-                Title1 = slider.Title1,
-                Title2 = slider.Title2,
-                Desc = slider.Desc,
+                Title = slider.Title,
             };
         }
 
@@ -66,7 +64,7 @@ namespace ProMusic.Helper.Implementations
                 .Select(x => new SliderListItemDto
                 {
                     Id = x.Id,
-                    Title1 = x.Title1,
+                    Title = x.Title,
                     Order = x.Order,
                 })
                 .ToList();
@@ -83,9 +81,7 @@ namespace ProMusic.Helper.Implementations
         {
             Slider slider = await _unitOfWork.SliderRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (slider is null) throw new NotFoundException("Item not found");
-            slider.Title1 = sliderPostDto.Title1;
-            slider.Title2 = sliderPostDto.Title2;
-            slider.Desc = sliderPostDto.Desc;
+            slider.Title = sliderPostDto.Title;
             slider.BtnText = sliderPostDto.BtnText;
             slider.BtnUrl = sliderPostDto.BtnUrl;
             slider.Order = sliderPostDto.Order;

@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http;
+
 namespace ProMusic.Helper.DTOs.CategoryDto
 {
     public class CategoryGetDto
@@ -9,5 +11,6 @@ namespace ProMusic.Helper.DTOs.CategoryDto
         public bool IsSubCategory { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
+        public IFormFile Photo { get; set; }
     }
 }

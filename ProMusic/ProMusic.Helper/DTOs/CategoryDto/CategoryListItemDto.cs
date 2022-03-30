@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http;
+
 namespace ProMusic.Helper.DTOs.CategoryDto
 {
     public class CategoryListItemDto
@@ -6,5 +8,6 @@ namespace ProMusic.Helper.DTOs.CategoryDto
         public int Id { get; set; }
         public string Name { get; set; }
         public bool IsSubCategory { get; set; }
+        public IFormFile Photo { get; set; }
     }
 }
