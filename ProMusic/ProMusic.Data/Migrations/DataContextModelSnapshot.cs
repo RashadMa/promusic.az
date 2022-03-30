@@ -331,6 +331,11 @@ namespace ProMusic.Data.Migrations
                     b.Property<decimal>("DiscountPercent")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 

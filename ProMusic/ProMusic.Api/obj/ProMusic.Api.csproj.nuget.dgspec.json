@@ -14,7 +14,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -85,7 +85,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -129,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -143,7 +143,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -175,6 +175,10 @@
               "target": "Package",
               "version": "[3.1.22, )"
             },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.22, )"
@@ -205,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -219,7 +223,7 @@
         "outputPath": "/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/rashad/.config/NuGet/NuGet.Config"
+          "/Users/rashad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -271,7 +275,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }

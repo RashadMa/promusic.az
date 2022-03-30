@@ -22,7 +22,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
-        public async Task<IActionResult> Create(ProductPostDto postDto)
+        public async Task<IActionResult> Create([FromForm] ProductPostDto postDto)
         {
             var product = await _productService.CreateAsync(postDto);
             return StatusCode(201, product);

@@ -17,7 +17,7 @@ namespace ProMusic.Helper.Profiles
             #region Product
 
             CreateMap<Product, ProductGetDto>();
-            CreateMap<ProductPostDto, Product>();
+            CreateMap<ProductPostDto, Product>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<ProductPutDto, Product>();
             CreateMap<Product, ProductListItemDto>();
             CreateMap<Product, ProductDto>();

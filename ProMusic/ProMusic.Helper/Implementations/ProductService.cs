@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs;
@@ -14,11 +17,13 @@ namespace ProMusic.Helper.Implementations
 {
     public class ProductService : IProductService
     {
+        private readonly IWebHostEnvironment _env;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ProductService(IUnitOfWork unitOfWork, IMapper mapper)
+        public ProductService(IUnitOfWork unitOfWork, IMapper mapper, IWebHostEnvironment env)
         {
+            _env = env;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
@@ -28,7 +33,31 @@ namespace ProMusic.Helper.Implementations
         public async Task<ProductGetDto> CreateAsync(ProductPostDto postDto)
         {
             if (await _unitOfWork.ProductRepository.IsExist(x => x.Name.ToUpper().Trim() == postDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Product already exist");
+
             Product product = _mapper.Map<Product>(postDto);
+
+            string fileName = "";
+            string Image = null;
+            if (postDto.Photo != null)
+            {
+                fileName = postDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
+                }
+
+                string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images", name);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    postDto.Photo.CopyTo(stream);
+                }
+            }
+
             await _unitOfWork.ProductRepository.AddAsync(product);
             await _unitOfWork.SaveAsync();
             return new ProductGetDto
@@ -41,6 +70,8 @@ namespace ProMusic.Helper.Implementations
                 CategoryId = product.CategoryId,
             };
         }
+
+
 
         #endregion
 
@@ -104,7 +135,7 @@ namespace ProMusic.Helper.Implementations
             if (product is null) throw new NotFoundException("Item not found");
             product.IsDeleted = true;
             await _unitOfWork.SaveAsync();
-        }        
+        }
 
         #endregion
     }

@@ -16,6 +16,11 @@ namespace ProMusic.Data.Configurations
                 .HasMaxLength(20);
 
             builder
+                .Property(x => x.Image)
+                .IsRequired(true)
+                .HasMaxLength(150);
+
+            builder
                 .Property(x => x.SalePrice)
                 .HasColumnType("decimal(18,2)")
                 .IsRequired(true);

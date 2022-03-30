@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http;
+
 namespace ProMusic.Helper.DTOs.ProductDto
 {
     public class ProductGetDto
@@ -14,5 +16,6 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public DateTime ModifiedAt { get; set; }
         public int BrandId { get; set; }
         public int CategoryId { get; set; }
+        public IFormFile Photo { get; set; }
     }
 }

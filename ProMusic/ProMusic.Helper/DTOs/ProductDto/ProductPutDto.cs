@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentValidation;
+using Microsoft.AspNetCore.Http;
 
 namespace ProMusic.Helper.DTOs.ProductDto
 {
@@ -11,6 +12,7 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public decimal DiscountPercent { get; set; }
         public int BrandId { get; set; }
         public int CategoryId { get; set; }
+        public IFormFile Photo { get; set; }
     }
     public class ProductPutDtoValidator : AbstractValidator<ProductPutDto>
     {

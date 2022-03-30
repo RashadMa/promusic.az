@@ -57,6 +57,30 @@ namespace ProMusic.Api
 
             services.AddScoped<ISettingService, SettingService>();
 
+            services.AddCors();
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowOrigin",
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+            });
+
             services.AddDbContext<DataContext>(opt =>
             {
                 opt.UseSqlServer(Configuration.GetConnectionString("Default"));
@@ -141,6 +165,8 @@ namespace ProMusic.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.ExceptionHandler();
 
             app.UseHttpsRedirection();
@@ -150,6 +176,18 @@ namespace ProMusic.Api
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCors();
+
+            app.UseCors(builder =>
+            {
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
+
+            app.UseCors("AllowOrigin");
 
             app.UseSwagger();
 

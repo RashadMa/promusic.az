@@ -9,6 +9,7 @@ namespace ProMusic.Core.Entities
         public decimal SalePrice { get; set; }
         public decimal CostPrice { get; set; }
         public decimal DiscountPercent { get; set; }
+        public string Image { get; set; }
         [Range(1, 5)]
         public double? Rate { get; set; }
         public int CategoryId { get; set; }

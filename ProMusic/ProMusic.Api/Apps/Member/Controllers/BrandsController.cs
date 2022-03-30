@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Core;
 using ProMusic.Helper.Interfaces;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ProMusic.Api.Apps.Member.Controllers
 {

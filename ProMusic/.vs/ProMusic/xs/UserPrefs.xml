@@ -1,20 +1,19 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Api/Apps/Admin/Controllers/CategoriesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/DataContext.cs">
     <Files>
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/CategoriesController.cs" Line="46" Column="22" />
+      <File FileName="ProMusic.Api/Startup.cs" Line="179" Column="1" />
+      <File FileName="ProMusic.Helper/Implementations/ProductService.cs" Line="51" Column="75" />
+      <File FileName="ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" Line="29" Column="1" />
+      <File FileName="ProMusic.Helper/DTOs/ProductDto/ProductGetDto.cs" Line="19" Column="1" />
+      <File FileName="ProMusic.Data/DataContext.cs" Line="38" Column="62" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Api" expanded="True">
-              <Node name="Apps" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True">
-                    <Node name="CategoriesController.cs" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
+            <Node name="ProMusic.Data" expanded="True">
+              <Node name="Migrations" expanded="True" />
+              <Node name="DataContext.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +24,10 @@
   <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" line="27" column="1" />
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/Implementations/ProductService.cs" relfile="ProMusic.Helper/Implementations/ProductService.cs" line="81" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

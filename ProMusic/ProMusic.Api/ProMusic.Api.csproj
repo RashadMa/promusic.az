@@ -16,6 +16,7 @@
     <None Remove="ServiceExtentions\" />
     <None Remove="Apps\Member\" />
     <None Remove="Apps\Member\Controller\" />
+    <None Remove="Content\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
@@ -28,5 +29,16 @@
     <Folder Include="ServiceExtentions\" />
     <Folder Include="Apps\Member\" />
     <Folder Include="Apps\Member\Controllers\" />
+    <Folder Include="Content\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\Images\strings.jpeg" />
+    <Content Remove="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\strings.jpeg" />
   </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@ namespace ProMusic.Helper.DTOs.CategoryDto
                 .WithMessage("Name is required");
 
             RuleFor(x => x.IsSubCategory)
-                .NotEmpty()
+                .NotNull()
                 .WithMessage("You must choose sub-category");
         }
     }

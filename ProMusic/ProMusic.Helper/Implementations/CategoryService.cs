@@ -40,7 +40,7 @@ namespace ProMusic.Helper.Implementations
         }
 
         #endregion
-
+                
         #region Get
 
         public async Task<CategoryGetDto> GetByIdAsync(int id)

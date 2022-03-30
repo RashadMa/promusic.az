@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http;
+
 namespace ProMusic.Helper.DTOs.ProductDto
 {
     public class ProductDto
@@ -7,5 +9,6 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public decimal SalePrice { get; set; }
         public decimal DiscountPercent { get; set; }
         public double? Rate { get; set; }
+        public IFormFile Photo { get; set; }
     }
 }
