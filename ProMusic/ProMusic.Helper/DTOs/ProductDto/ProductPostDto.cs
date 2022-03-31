@@ -30,8 +30,8 @@ namespace ProMusic.Helper.DTOs.ProductDto
             });
 
             RuleFor(x => x.Name)
-                .MaximumLength(20)
-                .WithMessage("Max length must be less than 20 character")
+                .MaximumLength(100)
+                .WithMessage("Max length must be less than 100 character")
                 .NotEmpty()
                 .WithMessage("Name is required");
 

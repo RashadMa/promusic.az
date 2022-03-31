@@ -33,6 +33,9 @@
     <Folder Include="wwwroot\Images\Slider\" />
     <Folder Include="wwwroot\Images\Products\" />
     <Folder Include="wwwroot\Images\Information\" />
+    <Folder Include="wwwroot\Images\Categories\" />
+    <Folder Include="wwwroot\Images\FafIcon\" />
+    <Folder Include="wwwroot\Images\Brands\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -40,5 +43,8 @@
     <Content Remove="wwwroot\Images\Slider\" />
     <Content Remove="wwwroot\Images\Products\" />
     <Content Remove="wwwroot\Images\Information\" />
+    <Content Remove="wwwroot\Images\Categories\" />
+    <Content Remove="wwwroot\Images\FafIcon\" />
+    <Content Remove="wwwroot\Images\Brands\" />
   </ItemGroup>
 </Project>

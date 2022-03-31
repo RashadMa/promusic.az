@@ -11,6 +11,6 @@ namespace ProMusic.Helper.DTOs.CategoryDto
         public bool IsSubCategory { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
-        public IFormFile Photo { get; set; }
+        public string Image { get; set; }
     }
 }

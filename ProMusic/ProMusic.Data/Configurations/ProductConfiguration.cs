@@ -13,7 +13,7 @@ namespace ProMusic.Data.Configurations
             builder
                 .Property(x => x.Name)
                 .IsRequired(true)
-                .HasMaxLength(20);
+                .HasMaxLength(100);
 
             builder
                 .Property(x => x.Image)

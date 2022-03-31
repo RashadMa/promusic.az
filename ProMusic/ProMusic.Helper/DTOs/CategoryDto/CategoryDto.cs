@@ -6,6 +6,6 @@ namespace ProMusic.Helper.DTOs.CategoryDto
     public class CategoryDto
     {
         public string Name { get; set; }
-        public IFormFile Photo { get; set; }
+        public string Image { get; set; }
     }
 }

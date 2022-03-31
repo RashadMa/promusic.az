@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Core.Repositories;
@@ -15,11 +17,13 @@ namespace ProMusic.Helper.Implementations
 {
     public class CategoryService : ICategoryService
     {
+        private readonly IWebHostEnvironment _env;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public CategoryService(IUnitOfWork unitOfWork, IMapper mapper)
+        public CategoryService(IUnitOfWork unitOfWork, IMapper mapper, IWebHostEnvironment env)
         {
+            _env = env;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
@@ -29,13 +33,34 @@ namespace ProMusic.Helper.Implementations
         public async Task<CategoryGetDto> CreateAsync(CategoryPostDto postDto)
         {
             if (await _unitOfWork.CategoryRepository.IsExist(x => x.Name.ToUpper().Trim() == postDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
+            string fileName = "";
+            if (postDto.Photo != null)
+            {
+                fileName = postDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/categories", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    postDto.Photo.CopyTo(stream);
+                }
+            }
             Category category = _mapper.Map<Category>(postDto);
             await _unitOfWork.CategoryRepository.AddAsync(category);
             await _unitOfWork.SaveAsync();
             return new CategoryGetDto
             {
                 Id = category.Id,
-                Name = category.Name
+                Name = category.Name,
+                Image = category.Image,
             };
         }
 
@@ -66,7 +91,8 @@ namespace ProMusic.Helper.Implementations
                 .Select(x => new CategoryListItemDto
                 {
                     Id = x.Id,
-                    Name = x.Name
+                    Name = x.Name,
+                    Image = x.Image,
                 })
                 .ToList();
 

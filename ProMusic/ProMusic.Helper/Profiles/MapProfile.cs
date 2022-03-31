@@ -10,7 +10,7 @@ using ProMusic.Helper.DTOs.SliderDto;
 
 namespace ProMusic.Helper.Profiles
 {
-    public class MapProfile:Profile
+    public class MapProfile : Profile
     {
         public MapProfile()
         {
@@ -18,7 +18,7 @@ namespace ProMusic.Helper.Profiles
 
             CreateMap<Product, ProductGetDto>();
             CreateMap<ProductPostDto, Product>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
-            CreateMap<ProductPutDto, Product>();
+            CreateMap<ProductPutDto, Product>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Product, ProductListItemDto>();
             CreateMap<Product, ProductDto>();
 
@@ -27,8 +27,8 @@ namespace ProMusic.Helper.Profiles
             #region Category
 
             CreateMap<Category, CategoryGetDto>();
-            CreateMap<CategoryPostDto, Category>();
-            CreateMap<CategoryPutDto, Category>();
+            CreateMap<CategoryPostDto, Category>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
+            CreateMap<CategoryPutDto, Category>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Category, CategoryListItemDto>();
             CreateMap<Category, CategoryDto>();
 
@@ -37,8 +37,8 @@ namespace ProMusic.Helper.Profiles
             #region Brand
 
             CreateMap<Brand, BrandGetDto>();
-            CreateMap<BrandPostDto, Brand>();
-            CreateMap<BrandPutDto, Brand>();
+            CreateMap<BrandPostDto, Brand>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
+            CreateMap<BrandPutDto, Brand>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Brand, BrandListItemDto>();
             CreateMap<Brand, BrandDto>();
 
@@ -65,7 +65,7 @@ namespace ProMusic.Helper.Profiles
             #region Setting
 
             CreateMap<Setting, SettingGetDto>();
-            CreateMap<SettingPostDto, Setting>();
+            CreateMap<SettingPostDto, Setting>();//.ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Setting, SettingListItemDto>();
 
             #endregion

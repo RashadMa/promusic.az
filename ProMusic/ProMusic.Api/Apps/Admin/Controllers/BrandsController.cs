@@ -28,7 +28,7 @@ namespace ProMusic.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
-        public async Task<IActionResult> Create(BrandPostDto brandPostDto)
+        public async Task<IActionResult> Create([FromForm] BrandPostDto brandPostDto)
         {
             var brand = await _brandService.CreateAsync(brandPostDto);
             return StatusCode(201, brand);
