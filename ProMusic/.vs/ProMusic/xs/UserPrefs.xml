@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/DataContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Implementations/InformationService.cs">
     <Files>
-      <File FileName="ProMusic.Data/DataContext.cs" Line="38" Column="62" />
+      <File FileName="ProMusic.Helper/DTOs/ProductDto/ProductDto.cs" Line="12" Column="42" />
+      <File FileName="ProMusic.Helper/Implementations/InformationService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Data" expanded="True">
-              <Node name="Migrations" expanded="True" />
-              <Node name="DataContext.cs" selected="True" />
+            <Node name="ProMusic.Api" expanded="True" />
+            <Node name="ProMusic.Data" expanded="True" />
+            <Node name="ProMusic.Helper" expanded="True">
+              <Node name="DTOs" expanded="True" />
+              <Node name="Implementations" expanded="True">
+                <Node name="InformationService.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -21,7 +26,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/ProductsController.cs" line="27" column="1" />
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/Implementations/SliderService.cs" relfile="ProMusic.Helper/Implementations/SliderService.cs" line="111" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -7,6 +7,6 @@ namespace ProMusic.Helper.DTOs.InformationDto
     {
         public string Tittle { get; set; }
         public string Desc { get; set; }
-        public IFormFile Photo { get; set; }
+        public string Image { get; set; }
     }
 }

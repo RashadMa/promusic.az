@@ -21,7 +21,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
-        public async Task<IActionResult> Create(SliderPostDto postDto)
+        public async Task<IActionResult> Create([FromForm] SliderPostDto postDto)
         {
             var slider = await _sliderService.CreateAsync(postDto);
             return StatusCode(201, slider);
@@ -52,7 +52,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Update
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, SliderPostDto sliderPostDto)
+        public async Task<IActionResult> Update(int id, [FromForm] SliderPostDto sliderPostDto)
         {
             await _sliderService.UpdateAsync(id, sliderPostDto);
             return NoContent();

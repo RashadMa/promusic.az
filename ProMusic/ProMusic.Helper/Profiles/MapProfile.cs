@@ -47,7 +47,7 @@ namespace ProMusic.Helper.Profiles
             #region Slider
 
             CreateMap<Slider, SliderGetDto>();
-            CreateMap<SliderPostDto, Slider>();
+            CreateMap<SliderPostDto, Slider>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Slider, SliderListItemDto>();
             CreateMap<Slider, SliderDto>();
 

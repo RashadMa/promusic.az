@@ -30,13 +30,13 @@
     <Folder Include="Apps\Member\Controllers\" />
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Images\Slider\" />
+    <Folder Include="wwwroot\Images\Products\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
-    <Content Remove="wwwroot\Images\strings.jpeg" />
     <Content Remove="wwwroot\Images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\Images\strings.jpeg" />
+    <Content Remove="wwwroot\Images\Slider\" />
+    <Content Remove="wwwroot\Images\Products\" />
   </ItemGroup>
 </Project>

@@ -30,14 +30,11 @@ namespace ProMusic.Helper.Implementations
 
         #region Create
 
-        public async Task<ProductGetDto> CreateAsync(ProductPostDto postDto)
+        public async Task<ProductGetDto> CreateAsync( [FromForm] ProductPostDto postDto)
         {
             if (await _unitOfWork.ProductRepository.IsExist(x => x.Name.ToUpper().Trim() == postDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Product already exist");
 
-            Product product = _mapper.Map<Product>(postDto);
-
             string fileName = "";
-            string Image = null;
             if (postDto.Photo != null)
             {
                 fileName = postDto.Photo.FileName;
@@ -48,15 +45,17 @@ namespace ProMusic.Helper.Implementations
                     fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
                 }
 
-                string name = DateTime.Now.Second.ToString() + (fileName);
+                //string name = DateTime.Now.Second.ToString() + (fileName);
 
-                string path = Path.Combine(_env.WebRootPath, "images", name);
+                string path = Path.Combine(_env.WebRootPath, "images/products", fileName);
 
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {
                     postDto.Photo.CopyTo(stream);
                 }
             }
+
+            Product product = _mapper.Map<Product>(postDto);
 
             await _unitOfWork.ProductRepository.AddAsync(product);
             await _unitOfWork.SaveAsync();
@@ -68,10 +67,9 @@ namespace ProMusic.Helper.Implementations
                 CostPrice = product.CostPrice,
                 BrandId = product.BrandId,
                 CategoryId = product.CategoryId,
+                Image = product.Image,
             };
         }
-
-
 
         #endregion
 
@@ -100,7 +98,11 @@ namespace ProMusic.Helper.Implementations
                 .Select(x => new ProductListItemDto
                 {
                     Id = x.Id,
-                    Name = x.Name
+                    Name = x.Name,
+                    Image = x.Image,
+                    SalePrice = x.SalePrice,
+                    DiscountPercent = x.DiscountPercent,
+                    Rate = x.Rate,
                 })
                 .ToList();
 

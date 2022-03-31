@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs;
@@ -14,11 +16,13 @@ namespace ProMusic.Helper.Implementations
 {
     public class SliderService : ISliderService
     {
+        private readonly IWebHostEnvironment _env;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public SliderService(IUnitOfWork unitOfWork, IMapper mapper)
+        public SliderService(IUnitOfWork unitOfWork, IMapper mapper, IWebHostEnvironment env)
         {
+            _env = env;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
@@ -27,6 +31,25 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<SliderGetDto> CreateAsync(SliderPostDto postDto)
         {
+            string fileName = "";
+            if (postDto.Photo != null)
+            {
+                fileName = postDto.Photo.FileName;
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/slider", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    postDto.Photo.CopyTo(stream);
+                }
+            }
+
             Slider slider = _mapper.Map<Slider>(postDto);
             await _unitOfWork.SliderRepository.AddAsync(slider);
             await _unitOfWork.SaveAsync();
@@ -34,6 +57,11 @@ namespace ProMusic.Helper.Implementations
             {
                 Id = slider.Id,
                 Title = slider.Title,
+                BtnText = slider.BtnText,
+                BtnUrl = slider.BtnUrl,
+                Order = slider.Order,
+                IsDeleted = slider.IsDeleted,
+                Image = slider.Image,
             };
         }
 
@@ -64,7 +92,10 @@ namespace ProMusic.Helper.Implementations
                 .Select(x => new SliderListItemDto
                 {
                     Id = x.Id,
+                    Image = x.Image,
                     Title = x.Title,
+                    BtnUrl = x.BtnUrl,
+                    BtnText = x.BtnText,
                     Order = x.Order,
                 })
                 .ToList();
@@ -80,7 +111,43 @@ namespace ProMusic.Helper.Implementations
         public async Task UpdateAsync(int id, SliderPostDto sliderPostDto)
         {
             Slider slider = await _unitOfWork.SliderRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
+
             if (slider is null) throw new NotFoundException("Item not found");
+
+            Slider oldSlider = await _unitOfWork.SliderRepository.GetAsync(x => x.Id == id);
+            if (oldSlider is null) throw new NotFoundException("item not found");
+
+            if (oldSlider.Image != null)
+            {
+                string oldPath = Path.Combine(_env.WebRootPath, "images/slider", oldSlider.Image);
+
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+            }
+
+            string fileName = "";
+            if (sliderPostDto.Photo != null)
+            {
+                fileName = sliderPostDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(sliderPostDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/slider", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    sliderPostDto.Photo.CopyTo(stream);
+                }
+            }
+
             slider.Title = sliderPostDto.Title;
             slider.BtnText = sliderPostDto.BtnText;
             slider.BtnUrl = sliderPostDto.BtnUrl;
