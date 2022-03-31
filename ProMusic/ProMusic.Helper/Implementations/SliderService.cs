@@ -152,6 +152,7 @@ namespace ProMusic.Helper.Implementations
             slider.BtnText = sliderPostDto.BtnText;
             slider.BtnUrl = sliderPostDto.BtnUrl;
             slider.Order = sliderPostDto.Order;
+            slider.Image = fileName;
             await _unitOfWork.SaveAsync();
         }
 

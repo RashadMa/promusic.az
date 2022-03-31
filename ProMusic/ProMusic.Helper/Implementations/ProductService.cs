@@ -118,12 +118,48 @@ namespace ProMusic.Helper.Implementations
         {
             Product product = await _unitOfWork.ProductRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (product is null) throw new NotFoundException("Item not found");
+
+            Product old = await _unitOfWork.ProductRepository.GetAsync(x => x.Id == id);
+            if (old is null) throw new NotFoundException("item not found");
+
+            if (old.Image != null)
+            {
+                string oldPath = Path.Combine(_env.WebRootPath, "images/products", old.Image);
+
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+            }
+
+            string fileName = "";
+            if (productPutDto.Photo != null)
+            {
+                fileName = productPutDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(productPutDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/products", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    productPutDto.Photo.CopyTo(stream);
+                }
+            }
+
             if (await _unitOfWork.ProductRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == productPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Product already exist");
             product.Name = productPutDto.Name;
             product.SalePrice = productPutDto.SalePrice;
             product.DiscountPercent = productPutDto.DiscountPercent;
             product.BrandId = productPutDto.BrandId;
             product.CategoryId = productPutDto.CategoryId;
+            product.Image = fileName;
             await _unitOfWork.SaveAsync();
         }
 

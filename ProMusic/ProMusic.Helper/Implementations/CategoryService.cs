@@ -108,8 +108,44 @@ namespace ProMusic.Helper.Implementations
         {
             Category category = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (category is null) throw new NotFoundException("Item not found");
+
+            Category old = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id);
+            if (old is null) throw new NotFoundException("item not found");
+
+            if (old.Image != null)
+            {
+                string oldPath = Path.Combine(_env.WebRootPath, "images/categories", old.Image);
+
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+            }
+
+            string fileName = "";
+            if (categoryPutDto.Photo != null)
+            {
+                fileName = categoryPutDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(categoryPutDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/categories", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    categoryPutDto.Photo.CopyTo(stream);
+                }
+            }
+
             if (await _unitOfWork.CategoryRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == categoryPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Category already exist");
             category.Name = categoryPutDto.Name;
+            category.Image = fileName;
             await _unitOfWork.SaveAsync();
         }
 

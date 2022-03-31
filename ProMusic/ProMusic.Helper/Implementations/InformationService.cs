@@ -108,8 +108,44 @@ namespace ProMusic.Helper.Implementations
         {
             Information information = await _unitOfWork.InformationRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (information is null) throw new NotFoundException("Item not found");
+
+            Information old = await _unitOfWork.InformationRepository.GetAsync(x => x.Id == id);
+            if (old is null) throw new NotFoundException("item not found");
+
+            if (old.Image != null)
+            {
+                string oldPath = Path.Combine(_env.WebRootPath, "images/information", old.Image);
+
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+            }
+
+            string fileName = "";
+            if (informationPostDto.Photo != null)
+            {
+                fileName = informationPostDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(informationPostDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/information", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    informationPostDto.Photo.CopyTo(stream);
+                }
+            }
+
             information.Title = informationPostDto.Title;
             information.Desc = informationPostDto.Desc;
+            information.Image = fileName;
             await _unitOfWork.SaveAsync();
         }
 

@@ -108,6 +108,41 @@ namespace ProMusic.Helper.Implementations
         {
             Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (brand is null) throw new NotFoundException("Item not found");
+
+            Brand old = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id);
+            if (old is null) throw new NotFoundException("item not found");
+
+            if (old.Image != null)
+            {
+                string oldPath = Path.Combine(_env.WebRootPath, "images/brands", old.Image);
+
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+            }
+
+            string fileName = "";
+            if (brandPutDto.Photo != null)
+            {
+                fileName = brandPutDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(brandPutDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/brands", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    brandPutDto.Photo.CopyTo(stream);
+                }
+            }
+
             if (await _unitOfWork.BrandRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == brandPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Brand already exist");
             brand.Name = brandPutDto.Name;
             await _unitOfWork.SaveAsync();

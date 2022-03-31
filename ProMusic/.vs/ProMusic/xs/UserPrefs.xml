@@ -3,7 +3,9 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" expanded="True" />
+          <Node name="ProMusic" expanded="True">
+            <Node name="ProMusic.Data" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -12,9 +14,7 @@
   <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Helper/Implementations/SliderService.cs" relfile="ProMusic.Helper/Implementations/SliderService.cs" line="111" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
