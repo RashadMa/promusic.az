@@ -26,12 +26,12 @@ namespace ProMusic.Helper.DTOs.InformationDto
             });
 
             RuleFor(x => x.Title)
-                .MaximumLength(20)
-                .WithMessage("Max length must be less than 20 character");
+                .MaximumLength(100)
+                .WithMessage("Max length must be less than 100 character");
 
             RuleFor(x => x.Desc)
-                .MaximumLength(20)
-                .WithMessage("Max length must be less than 20 character");
+                .MaximumLength(100)
+                .WithMessage("Max length must be less than 100 character");
         }
     }
 }

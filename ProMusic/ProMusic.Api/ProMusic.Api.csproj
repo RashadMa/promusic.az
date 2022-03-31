@@ -32,11 +32,13 @@
     <Folder Include="wwwroot\Images\" />
     <Folder Include="wwwroot\Images\Slider\" />
     <Folder Include="wwwroot\Images\Products\" />
+    <Folder Include="wwwroot\Images\Information\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\Images\" />
     <Content Remove="wwwroot\Images\Slider\" />
     <Content Remove="wwwroot\Images\Products\" />
+    <Content Remove="wwwroot\Images\Information\" />
   </ItemGroup>
 </Project>

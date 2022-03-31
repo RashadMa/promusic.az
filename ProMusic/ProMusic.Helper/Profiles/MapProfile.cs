@@ -56,7 +56,7 @@ namespace ProMusic.Helper.Profiles
             #region Information
 
             CreateMap<Information, InformationGetDto>();
-            CreateMap<InformationPostDto, Information>();
+            CreateMap<InformationPostDto, Information>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Information, InformationListItemDto>();
             CreateMap<Information, InformationDto>();
 

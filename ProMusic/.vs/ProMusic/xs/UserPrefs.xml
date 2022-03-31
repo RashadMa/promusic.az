@@ -1,21 +1,10 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Implementations/InformationService.cs">
-    <Files>
-      <File FileName="ProMusic.Helper/DTOs/ProductDto/ProductDto.cs" Line="12" Column="42" />
-      <File FileName="ProMusic.Helper/Implementations/InformationService.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Api" expanded="True" />
             <Node name="ProMusic.Data" expanded="True" />
-            <Node name="ProMusic.Helper" expanded="True">
-              <Node name="DTOs" expanded="True" />
-              <Node name="Implementations" expanded="True">
-                <Node name="InformationService.cs" selected="True" />
-              </Node>
-            </Node>
           </Node>
         </State>
       </Pad>

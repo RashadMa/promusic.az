@@ -157,3 +157,4 @@
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.dll
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.pdb
 /Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/obj/Debug/netcoreapp3.1/ProMusic.Api.genruntimeconfig.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/bin/Debug/netcoreapp3.1/ProMusic.Api

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs;
@@ -14,11 +16,13 @@ namespace ProMusic.Helper.Implementations
 {
     public class InformationService : IInformationService
     {
+        private readonly IWebHostEnvironment _env;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public InformationService(IUnitOfWork unitOfWork, IMapper mapper)
+        public InformationService(IUnitOfWork unitOfWork, IMapper mapper, IWebHostEnvironment env)
         {
+            _env = env;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
@@ -27,6 +31,27 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<InformationGetDto> CreateAsync(InformationPostDto postDto)
         {
+            string fileName = "";
+            if (postDto.Photo != null)
+            {
+                fileName = postDto.Photo.FileName;
+
+
+                if (fileName.Length > 100)
+                {
+                    fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
+                }
+
+                //string name = DateTime.Now.Second.ToString() + (fileName);
+
+                string path = Path.Combine(_env.WebRootPath, "images/information", fileName);
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    postDto.Photo.CopyTo(stream);
+                }
+            }
+
             Information information = _mapper.Map<Information>(postDto);
             await _unitOfWork.InformationRepository.AddAsync(information);
             await _unitOfWork.SaveAsync();
@@ -34,6 +59,7 @@ namespace ProMusic.Helper.Implementations
             {
                 Title = information.Title,
                 Desc = information.Desc,
+                Image = information.Image,
             };
         }
 
@@ -65,6 +91,8 @@ namespace ProMusic.Helper.Implementations
                 {
                     Id = x.Id,
                     Title = x.Title,
+                    Image = x.Image,
+                    Desc = x.Desc,
                 })
                 .ToList();
 

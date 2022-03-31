@@ -11,11 +11,11 @@ namespace ProMusic.Data.Configurations
         {
             builder
                 .Property(x => x.Title)
-                .HasMaxLength(20);
+                .HasMaxLength(100);
 
             builder
                 .Property(x => x.Desc)
-                .HasMaxLength(20);
+                .HasMaxLength(100);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
-        public async Task<IActionResult> Create(InformationPostDto postDto)
+        public async Task<IActionResult> Create([FromForm] InformationPostDto postDto)
         {
             var information = await _informationService.CreateAsync(postDto);
             return StatusCode(201, information);
