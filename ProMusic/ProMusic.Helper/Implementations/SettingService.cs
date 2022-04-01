@@ -31,26 +31,26 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<SettingGetDto> CreateAsync(SettingPostDto postDto)
         {
-            string fileName = "";
-            if (postDto.Photo != null)
-            {
-                fileName = postDto.Photo.FileName;
+            //string fileName = "";
+            //if (postDto.Photo != null)
+            //{
+            //    fileName = postDto.Photo.FileName;
 
 
-                if (fileName.Length > 100)
-                {
-                    fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
-                }
+            //    if (fileName.Length > 100)
+            //    {
+            //        fileName = fileName.Substring(postDto.Photo.FileName.Length - 64, 64);
+            //    }
 
-                //string name = DateTime.Now.Second.ToString() + (fileName);
+            //    //string name = DateTime.Now.Second.ToString() + (fileName);
 
-                string path = Path.Combine(_env.WebRootPath, "images/settings", fileName);
+            //    string path = Path.Combine(_env.WebRootPath, "images/settings", fileName);
 
-                using (FileStream stream = new FileStream(path, FileMode.Create))
-                {
-                    postDto.Photo.CopyTo(stream);
-                }
-            }
+            //    using (FileStream stream = new FileStream(path, FileMode.Create))
+            //    {
+            //        postDto.Photo.CopyTo(stream);
+            //    }
+            //}
 
             Setting setting = _mapper.Map<Setting>(postDto);
             await _unitOfWork.SettingRepository.AddAsync(setting);
@@ -59,7 +59,7 @@ namespace ProMusic.Helper.Implementations
             {
                 Key = setting.Key,
                 Value = setting.Value,
-                Image = setting.Image,
+                //Image = setting.Image,
             };
         }
 
@@ -107,42 +107,42 @@ namespace ProMusic.Helper.Implementations
         {
             Setting setting = await _unitOfWork.SettingRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (setting is null) throw new NotFoundException("Item not found");
-            Setting old = await _unitOfWork.SettingRepository.GetAsync(x => x.Id == id);
-            if (old is null) throw new NotFoundException("item not found");
+            //Setting old = await _unitOfWork.SettingRepository.GetAsync(x => x.Id == id);
+            //if (old is null) throw new NotFoundException("item not found");
 
-            if (old.Image != null)
-            {
-                string oldPath = Path.Combine(_env.WebRootPath, "images/settings", old.Image);
+            //if (old.Image != null)
+            //{
+            //    string oldPath = Path.Combine(_env.WebRootPath, "images/settings", old.Image);
 
-                if (System.IO.File.Exists(oldPath))
-                {
-                    System.IO.File.Delete(oldPath);
-                }
-            }
+            //    if (System.IO.File.Exists(oldPath))
+            //    {
+            //        System.IO.File.Delete(oldPath);
+            //    }
+            //}
 
-            string fileName = "";
-            if (settingPostDto.Photo != null)
-            {
-                fileName = settingPostDto.Photo.FileName;
+            //string fileName = "";
+            //if (settingPostDto.Photo != null)
+            //{
+            //    fileName = settingPostDto.Photo.FileName;
 
 
-                if (fileName.Length > 100)
-                {
-                    fileName = fileName.Substring(settingPostDto.Photo.FileName.Length - 64, 64);
-                }
+            //    if (fileName.Length > 100)
+            //    {
+            //        fileName = fileName.Substring(settingPostDto.Photo.FileName.Length - 64, 64);
+            //    }
 
-                //string name = DateTime.Now.Second.ToString() + (fileName);
+            //    //string name = DateTime.Now.Second.ToString() + (fileName);
 
-                string path = Path.Combine(_env.WebRootPath, "images/settings", fileName);
+            //    string path = Path.Combine(_env.WebRootPath, "images/settings", fileName);
 
-                using (FileStream stream = new FileStream(path, FileMode.Create))
-                {
-                    settingPostDto.Photo.CopyTo(stream);
-                }
-            }
+            //    using (FileStream stream = new FileStream(path, FileMode.Create))
+            //    {
+            //        settingPostDto.Photo.CopyTo(stream);
+            //    }
+            //}
             setting.Key = settingPostDto.Key;
             setting.Value = settingPostDto.Value;
-            setting.Image = fileName;
+            //setting.Image = fileName;
             await _unitOfWork.SaveAsync();
         }
 

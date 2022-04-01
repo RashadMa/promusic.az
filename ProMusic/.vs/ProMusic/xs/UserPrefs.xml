@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Data/Migrations/20220401153757_asdasdasda.cs">
     <Files>
       <File FileName="ProMusic.Helper/Profiles/MapProfile.cs" Line="68" Column="49" />
-      <File FileName="ProMusic.Helper/Implementations/SettingService.cs" Line="145" Column="38" />
+      <File FileName="ProMusic.Helper/Implementations/SettingService.cs" Line="139" Column="20" />
       <File FileName="ProMusic.Helper/Implementations/ProductService.cs" Line="155" Column="1" />
-      <File FileName="ProMusic.Helper/Implementations/SliderService.cs" Line="28" Column="10" />
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" Line="43" Column="14" />
+      <File FileName="ProMusic.Helper/Implementations/SliderService.cs" />
+      <File FileName="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" Line="44" Column="56" />
+      <File FileName="ProMusic.Core/Entities/Setting.cs" Line="10" Column="42" />
+      <File FileName="ProMusic.Data/DataContext.cs" Line="38" Column="62" />
+      <File FileName="ProMusic.Data/Migrations/20220401153757_asdasdasda.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,18 +17,22 @@
             <Node name="ProMusic.Api" expanded="True">
               <Node name="Apps" expanded="True">
                 <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True">
-                    <Node name="SettingsController.cs" selected="True" />
-                  </Node>
+                  <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="Images" expanded="True" />
+            </Node>
+            <Node name="ProMusic.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="ProMusic.Data" expanded="True">
+              <Node name="Migrations" expanded="True">
+                <Node name="20220401153757_asdasdasda.cs" selected="True" />
               </Node>
             </Node>
-            <Node name="ProMusic.Core" expanded="True" />
             <Node name="ProMusic.Helper" expanded="True">
+              <Node name="DTOs" expanded="True" />
               <Node name="Implementations" expanded="True" />
+              <Node name="Profiles" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -34,9 +41,11 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rashad/Desktop/untitled folder/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" line="33" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
