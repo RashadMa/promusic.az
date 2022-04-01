@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\BrandDto\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Implementations\" />
+    <None Remove="Profiles\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="FluentValidation.AspNetCore" />
+    <None Remove="DTOs\CategoryDto\" />
+    <None Remove="Exceptions\" />
+    <None Remove="DTOs\ProductDto\" />
+    <None Remove="DTOs\SliderDto\" />
+    <None Remove="DTOs\InformationDto\" />
+    <None Remove="DTOs\SettingDto\" />
+    <None Remove="DTOs\AccountDto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\BrandDto\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="Profiles\" />
+    <Folder Include="DTOs\CategoryDto\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="DTOs\ProductDto\" />
+    <Folder Include="DTOs\SliderDto\" />
+    <Folder Include="DTOs\InformationDto\" />
+    <Folder Include="DTOs\SettingDto\" />
+    <Folder Include="DTOs\AccountDto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
+  </ItemGroup>
+</Project>
