@@ -17,6 +17,8 @@
           <Node name="ProMusic" expanded="True">
             <Node name="ProMusic.Api" expanded="True">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
               <Node name="Apps" expanded="True">
                 <Node name="Admin" expanded="True">
                   <Node name="Controllers" expanded="True">
@@ -32,11 +34,21 @@
             <Node name="ProMusic.Helper" expanded="True">
               <Node name="Implementations" expanded="True" />
 =======
+=======
+>>>>>>> c81b82d (Brands Slider is done)
+=======
+>>>>>>> c81b82d (Brands Slider is done)
               <Node name="Properties" expanded="True" />
               <Node name="ServiceExtentions" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
               <Node name="Startup.cs" selected="True" />
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
+=======
+>>>>>>> c81b82d (Brands Slider is done)
+=======
+>>>>>>> c81b82d (Brands Slider is done)
             </Node>
           </Node>
         </State>
