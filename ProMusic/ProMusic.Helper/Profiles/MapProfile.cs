@@ -65,7 +65,7 @@ namespace ProMusic.Helper.Profiles
             #region Setting
 
             CreateMap<Setting, SettingGetDto>();
-            CreateMap<SettingPostDto, Setting>();//.ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
+            CreateMap<SettingPostDto, Setting>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Setting, SettingListItemDto>();
 
             #endregion
