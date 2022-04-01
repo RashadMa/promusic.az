@@ -7,7 +7,6 @@ namespace ProMusic.Helper.DTOs.CategoryDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsSubCategory { get; set; }
         public string Image { get; set; }
     }
 }

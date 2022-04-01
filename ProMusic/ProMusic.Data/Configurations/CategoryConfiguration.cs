@@ -23,8 +23,8 @@ namespace ProMusic.Data.Configurations
                 .HasDefaultValueSql("GETUTCDATE()");
 
             builder
-                .Property(x => x.IsSubCategory)
-                .IsRequired(true);
+                .Property(x => x.Image)
+                .IsRequired(false);
         }
     }
 }
