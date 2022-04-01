@@ -3,11 +3,15 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" expanded="True" />
+          <Node name="ProMusic" expanded="True">
+            <Node name="ProMusic.Api" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="ServiceExtentions" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
