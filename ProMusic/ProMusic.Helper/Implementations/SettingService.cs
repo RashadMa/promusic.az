@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Hosting;
+=======
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs;
@@ -16,6 +22,7 @@ namespace ProMusic.Helper.Implementations
 {
     public class SettingService : ISettingService
     {
+<<<<<<< HEAD
         private readonly IWebHostEnvironment _env;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -23,6 +30,13 @@ namespace ProMusic.Helper.Implementations
         public SettingService(IUnitOfWork unitOfWork, IMapper mapper, IWebHostEnvironment env)
         {
             _env = env;
+=======
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+
+        public SettingService(IUnitOfWork unitOfWork, IMapper mapper)
+        {
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
@@ -31,6 +45,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<SettingGetDto> CreateAsync(SettingPostDto postDto)
         {
+<<<<<<< HEAD
             string fileName = "";
             if (postDto.Photo != null)
             {
@@ -52,14 +67,20 @@ namespace ProMusic.Helper.Implementations
                 }
             }
 
+=======
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
             Setting setting = _mapper.Map<Setting>(postDto);
             await _unitOfWork.SettingRepository.AddAsync(setting);
             await _unitOfWork.SaveAsync();
             return new SettingGetDto
             {
                 Key = setting.Key,
+<<<<<<< HEAD
                 Value = setting.Value,
                 Image = setting.Image,
+=======
+                Value = setting.Value
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
             };
         }
 
@@ -81,7 +102,11 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<SettingListItemDto>> GetAll(int page)
         {
+<<<<<<< HEAD
             var query = _unitOfWork.SettingRepository.GetAll(x => !x.IsDeleted);
+=======
+            var query = _unitOfWork.SettingRepository.GetAll(x=> !x.IsDeleted);
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
             List<SettingListItemDto> items = query
@@ -90,8 +115,12 @@ namespace ProMusic.Helper.Implementations
                 .Select(x => new SettingListItemDto
                 {
                     Key = x.Key,
+<<<<<<< HEAD
                     Value = x.Value,
                     Image = x.Image,
+=======
+                    Value = x.Value
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
                 })
                 .ToList();
 
@@ -107,6 +136,7 @@ namespace ProMusic.Helper.Implementations
         {
             Setting setting = await _unitOfWork.SettingRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (setting is null) throw new NotFoundException("Item not found");
+<<<<<<< HEAD
             Setting old = await _unitOfWork.SettingRepository.GetAsync(x => x.Id == id);
             if (old is null) throw new NotFoundException("item not found");
 
@@ -143,6 +173,10 @@ namespace ProMusic.Helper.Implementations
             setting.Key = settingPostDto.Key;
             setting.Value = settingPostDto.Value;
             setting.Image = fileName;
+=======
+            setting.Key = settingPostDto.Key;
+            setting.Value = settingPostDto.Value;
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
             await _unitOfWork.SaveAsync();
         }
 

@@ -34,8 +34,13 @@
     <Folder Include="wwwroot\Images\Products\" />
     <Folder Include="wwwroot\Images\Information\" />
     <Folder Include="wwwroot\Images\Categories\" />
+<<<<<<< HEAD
     <Folder Include="wwwroot\Images\Brands\" />
     <Folder Include="wwwroot\Images\Settings\" />
+=======
+    <Folder Include="wwwroot\Images\FafIcon\" />
+    <Folder Include="wwwroot\Images\Brands\" />
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -44,7 +49,12 @@
     <Content Remove="wwwroot\Images\Products\" />
     <Content Remove="wwwroot\Images\Information\" />
     <Content Remove="wwwroot\Images\Categories\" />
+<<<<<<< HEAD
     <Content Remove="wwwroot\Images\Brands\" />
     <Content Remove="wwwroot\Images\Settings\" />
+=======
+    <Content Remove="wwwroot\Images\FafIcon\" />
+    <Content Remove="wwwroot\Images\Brands\" />
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
   </ItemGroup>
 </Project>

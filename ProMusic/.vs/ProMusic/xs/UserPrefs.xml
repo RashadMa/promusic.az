@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs">
     <Files>
       <File FileName="ProMusic.Helper/Profiles/MapProfile.cs" Line="68" Column="49" />
@@ -7,11 +8,15 @@
       <File FileName="ProMusic.Helper/Implementations/SliderService.cs" Line="28" Column="10" />
       <File FileName="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" Line="43" Column="14" />
     </Files>
+=======
+  <MonoDevelop.Ide.Workbench>
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
             <Node name="ProMusic.Api" expanded="True">
+<<<<<<< HEAD
               <Node name="Apps" expanded="True">
                 <Node name="Admin" expanded="True">
                   <Node name="Controllers" expanded="True">
@@ -26,6 +31,12 @@
             <Node name="ProMusic.Core" expanded="True" />
             <Node name="ProMusic.Helper" expanded="True">
               <Node name="Implementations" expanded="True" />
+=======
+              <Node name="Properties" expanded="True" />
+              <Node name="ServiceExtentions" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
+>>>>>>> 2aabfc1c09e750146f34fe04d9770d7e625d6215
             </Node>
           </Node>
         </State>
