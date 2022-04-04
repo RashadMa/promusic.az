@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ProMusic.Helper.DTOs.CategoryDto;
 using ProMusic.Helper.Interfaces;
 
 namespace ProMusic.Api.Apps.Member.Controllers
@@ -11,10 +12,13 @@ namespace ProMusic.Api.Apps.Member.Controllers
     public class CategoriesController : Controller
     {
         private readonly ICategoryService _categoryService;
+        private readonly ISubCategoryService _subCategoryService;
 
-        public CategoriesController(ICategoryService categoryService)
+        public CategoriesController(ICategoryService categoryService,
+                                    ISubCategoryService subCategoryService)
         {
             _categoryService = categoryService;
+            _subCategoryService = subCategoryService;
         }
 
         #region Get

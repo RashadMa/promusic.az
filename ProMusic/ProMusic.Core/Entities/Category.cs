@@ -7,6 +7,6 @@ namespace ProMusic.Core.Entities
     {
         public string Name { get; set; }
         public string Image { get; set; }
-        public List<Product> Products { get; set; }
+        public List<SubCategory> SubCategories { get; set; }
     }
 }

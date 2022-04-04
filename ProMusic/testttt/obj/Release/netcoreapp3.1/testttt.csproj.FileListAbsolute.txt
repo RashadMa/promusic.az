@@ -1,0 +1,13 @@
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/bin/Release/netcoreapp3.1/testttt.deps.json
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/bin/Release/netcoreapp3.1/testttt.runtimeconfig.json
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/bin/Release/netcoreapp3.1/testttt.runtimeconfig.dev.json
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/bin/Release/netcoreapp3.1/testttt.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/bin/Release/netcoreapp3.1/testttt.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.csproj.AssemblyReference.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.AssemblyInfoInputs.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.AssemblyInfo.cs
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.csproj.CoreCompileInputs.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.dll
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.pdb
+/Users/rashad/Desktop/promusic.az/ProMusic/testttt/obj/Release/netcoreapp3.1/testttt.genruntimeconfig.cache

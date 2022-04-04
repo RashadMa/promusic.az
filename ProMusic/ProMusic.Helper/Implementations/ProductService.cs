@@ -66,7 +66,7 @@ namespace ProMusic.Helper.Implementations
                 SalePrice = product.SalePrice,
                 CostPrice = product.CostPrice,
                 BrandId = product.BrandId,
-                CategoryId = product.CategoryId,
+                SubCategoryId = product.SubCategoryId,
                 Image = product.Image,
             };
         }
@@ -103,6 +103,7 @@ namespace ProMusic.Helper.Implementations
                     SalePrice = x.SalePrice,
                     DiscountPercent = x.DiscountPercent,
                     Rate = x.Rate,
+                    SubCategoryId = x.SubCategoryId,
                 })
                 .ToList();
 
@@ -158,7 +159,7 @@ namespace ProMusic.Helper.Implementations
             product.SalePrice = productPutDto.SalePrice;
             product.DiscountPercent = productPutDto.DiscountPercent;
             product.BrandId = productPutDto.BrandId;
-            product.CategoryId = productPutDto.CategoryId;
+            product.SubCategoryId = productPutDto.SubCategoryId;
             product.Image = fileName;
             await _unitOfWork.SaveAsync();
         }

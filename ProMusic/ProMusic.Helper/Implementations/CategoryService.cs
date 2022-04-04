@@ -52,6 +52,7 @@ namespace ProMusic.Helper.Implementations
                 {
                     postDto.Photo.CopyTo(stream);
                 }
+
             }
             Category category = _mapper.Map<Category>(postDto);
             await _unitOfWork.CategoryRepository.AddAsync(category);
@@ -65,7 +66,7 @@ namespace ProMusic.Helper.Implementations
         }
 
         #endregion
-                
+
         #region Get
 
         public async Task<CategoryGetDto> GetByIdAsync(int id)

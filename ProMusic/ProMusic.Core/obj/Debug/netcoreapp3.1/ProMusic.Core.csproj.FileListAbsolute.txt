@@ -27,3 +27,4 @@
 /Users/rashad/Desktop/untitled folder/promusic.az/ProMusic/ProMusic.Core/obj/Debug/netcoreapp3.1/ProMusic.Core.dll
 /Users/rashad/Desktop/untitled folder/promusic.az/ProMusic/ProMusic.Core/obj/Debug/netcoreapp3.1/ProMusic.Core.pdb
 /Users/rashad/Desktop/untitled folder/promusic.az/ProMusic/ProMusic.Core/obj/Debug/netcoreapp3.1/ProMusic.Core.csproj.AssemblyReference.cache
+/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Core/obj/Debug/netcoreapp3.1/ProMusic.Core.csproj.AssemblyReference.cache

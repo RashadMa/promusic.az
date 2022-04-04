@@ -15,7 +15,7 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public int BrandId { get; set; }
-        public int CategoryId { get; set; }
+        public int SubCategoryId { get; set; }
         public string Image { get; set; }
     }
 }

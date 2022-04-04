@@ -12,9 +12,9 @@ namespace ProMusic.Core.Entities
         public string Image { get; set; }
         [Range(1, 5)]
         public double? Rate { get; set; }
-        public int CategoryId { get; set; }
+        public int SubCategoryId { get; set; }
         public int BrandId { get; set; }
-        public Category Category { get; set; }
+        public SubCategory SubCategory { get; set; }
         public Brand Brand { get; set; }
     }
 }

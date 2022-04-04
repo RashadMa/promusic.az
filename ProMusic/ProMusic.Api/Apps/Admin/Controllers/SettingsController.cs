@@ -41,7 +41,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Update
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, SettingPostDto settingPostDto)
+        public async Task<IActionResult> Update(int id, [FromForm] SettingPostDto settingPostDto)
         {
             await _settingService.UpdateAsync(id, settingPostDto);
             return NoContent();

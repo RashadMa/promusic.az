@@ -43,7 +43,7 @@ namespace ProMusic.Data.Configurations
                 .HasDefaultValueSql("GETUTCDATE()");
 
             builder
-                .HasOne(x => x.Category)
+                .HasOne(x => x.SubCategory)
                 .WithMany(x => x.Products)
                 .OnDelete(DeleteBehavior.Cascade);
 

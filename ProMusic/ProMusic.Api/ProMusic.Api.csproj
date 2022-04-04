@@ -36,6 +36,7 @@
     <Folder Include="wwwroot\Images\Categories\" />
     <Folder Include="wwwroot\Images\Brands\" />
     <Folder Include="wwwroot\Images\Settings\" />
+    <Folder Include="wwwroot\Images\SubCategories\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
@@ -46,5 +47,6 @@
     <Content Remove="wwwroot\Images\Categories\" />
     <Content Remove="wwwroot\Images\Brands\" />
     <Content Remove="wwwroot\Images\Settings\" />
+    <Content Remove="wwwroot\Images\SubCategories\" />
   </ItemGroup>
 </Project>

@@ -19,9 +19,11 @@ namespace ProMusic.Data
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Information> Informations { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new SubCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new BrandConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new SettingConfiguration());

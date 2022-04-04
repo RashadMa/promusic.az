@@ -7,6 +7,7 @@ using ProMusic.Helper.DTOs.InformationDto;
 using ProMusic.Helper.DTOs.ProductDto;
 using ProMusic.Helper.DTOs.SettingDto;
 using ProMusic.Helper.DTOs.SliderDto;
+using ProMusic.Helper.DTOs.SubCategoryDto;
 
 namespace ProMusic.Helper.Profiles
 {
@@ -31,6 +32,14 @@ namespace ProMusic.Helper.Profiles
             CreateMap<CategoryPutDto, Category>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Category, CategoryListItemDto>();
             CreateMap<Category, CategoryDto>();
+
+            #endregion
+
+            #region Sub Category
+
+            CreateMap<SubCategory, SubCategoryGetDto>();
+            CreateMap<SubCategoryPostDto, SubCategory>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
+            CreateMap<SubCategory, SubCategoryListItemDto>();
 
             #endregion
 
@@ -65,7 +74,7 @@ namespace ProMusic.Helper.Profiles
             #region Setting
 
             CreateMap<Setting, SettingGetDto>();
-            CreateMap<SettingPostDto, Setting>().ForMember(x => x.Image, y => y.MapFrom(x => x.Photo.FileName));
+            CreateMap<SettingPostDto, Setting>().ForMember(x => x.Value, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Setting, SettingListItemDto>();
 
             #endregion

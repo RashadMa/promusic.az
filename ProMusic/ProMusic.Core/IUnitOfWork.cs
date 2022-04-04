@@ -13,6 +13,7 @@ namespace ProMusic.Core
         IProductRepository ProductRepository { get; }
         ISliderRepository SliderRepository { get; }
         IInformationRepository InformationRepository { get; }
+        ISubCategoryRepository SubCategoryRepository { get; }
 
         int Save();
         Task<int> SaveAsync();

@@ -1,37 +1,28 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Profiles/MapProfile.cs">
-    <Files>
-      <File FileName="ProMusic.Helper/Profiles/MapProfile.cs" Line="57" Column="1" />
-      <File FileName="ProMusic.Helper/Implementations/SettingService.cs" />
-      <File FileName="ProMusic.Helper/Implementations/ProductService.cs" />
-      <File FileName="ProMusic.Helper/Implementations/SliderService.cs" />
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" />
-      <File FileName="ProMusic.Core/Entities/Setting.cs" />
-      <File FileName="ProMusic.Data/DataContext.cs" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProMusic" expanded="True">
             <Node name="ProMusic.Api" expanded="True">
               <Node name="Apps" expanded="True">
-                <Node name="Admin" expanded="True">
+                <Node name="Member" expanded="True">
                   <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
             </Node>
             <Node name="ProMusic.Core" expanded="True">
-              <Node name="Entities" expanded="True" />
-            </Node>
-            <Node name="ProMusic.Data" expanded="True">
-              <Node name="Migrations" expanded="True" />
+              <Node name="Repositories" expanded="True" />
             </Node>
             <Node name="ProMusic.Helper" expanded="True">
-              <Node name="DTOs" expanded="True" />
-              <Node name="Implementations" expanded="True" />
-              <Node name="Profiles" expanded="True">
-                <Node name="MapProfile.cs" selected="True" />
+              <Node name="DTOs" expanded="True">
+                <Node name="CategoryDto" expanded="True" />
+                <Node name="SubCategoryDto" expanded="True" />
               </Node>
+              <Node name="Implementations" expanded="True">
+                <Node name="SubCategoryService.cs" selected="True" />
+              </Node>
+              <Node name="Interfaces" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -42,9 +33,7 @@
   <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/SettingsController.cs" line="33" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
