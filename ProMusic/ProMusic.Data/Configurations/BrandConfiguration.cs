@@ -15,6 +15,11 @@ namespace ProMusic.Data.Configurations
                 .HasMaxLength(20);
 
             builder
+                .Property(x => x.Desc)
+                .IsRequired(true)
+                .HasMaxLength(400);
+
+            builder
                 .Property(x => x.CratedAt)
                 .HasDefaultValueSql("GETUTCDATE()");
 
