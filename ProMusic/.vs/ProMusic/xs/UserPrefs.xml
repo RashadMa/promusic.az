@@ -3,28 +3,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Api" expanded="True">
-              <Node name="Apps" expanded="True">
-                <Node name="Member" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="ProMusic.Core" expanded="True">
-              <Node name="Repositories" expanded="True" />
-            </Node>
-            <Node name="ProMusic.Helper" expanded="True">
-              <Node name="DTOs" expanded="True">
-                <Node name="CategoryDto" expanded="True" />
-                <Node name="SubCategoryDto" expanded="True" />
-              </Node>
-              <Node name="Implementations" expanded="True">
-                <Node name="SubCategoryService.cs" selected="True" />
-              </Node>
-              <Node name="Interfaces" expanded="True" />
-            </Node>
-          </Node>
+          <Node />
         </State>
       </Pad>
     </Pads>

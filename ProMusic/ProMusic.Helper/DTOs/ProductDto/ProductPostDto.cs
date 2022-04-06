@@ -10,6 +10,7 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public decimal SalePrice { get; set; }
         public decimal CostPrice { get; set; }
         public decimal DiscountPercent { get; set; }
+        public string Desc { get; set; }
         public int BrandId { get; set; }
         public int SubCategoryId { get; set; }
         public IFormFile Photo { get; set; }
@@ -28,6 +29,12 @@ namespace ProMusic.Helper.DTOs.ProductDto
                 if (x.Photo.Length > 4194304)
                     context.AddFailure("ImageFile", "file size must be less than 4mb");
             });
+
+            RuleFor(x => x.Desc)
+               .MaximumLength(150)
+               .WithMessage("Max length must be less than 150 character")
+               .NotEmpty()
+               .WithMessage("Description is required");
 
             RuleFor(x => x.Name)
                 .MaximumLength(100)

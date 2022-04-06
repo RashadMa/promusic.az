@@ -68,6 +68,7 @@ namespace ProMusic.Helper.Implementations
                 BrandId = product.BrandId,
                 SubCategoryId = product.SubCategoryId,
                 Image = product.Image,
+                Desc = product.Desc,
             };
         }
 
@@ -104,6 +105,7 @@ namespace ProMusic.Helper.Implementations
                     DiscountPercent = x.DiscountPercent,
                     Rate = x.Rate,
                     SubCategoryId = x.SubCategoryId,
+                    Desc = x.Desc,
                 })
                 .ToList();
 
@@ -161,6 +163,7 @@ namespace ProMusic.Helper.Implementations
             product.BrandId = productPutDto.BrandId;
             product.SubCategoryId = productPutDto.SubCategoryId;
             product.Image = fileName;
+            product.Desc = productPutDto.Desc;
             await _unitOfWork.SaveAsync();
         }
 

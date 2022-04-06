@@ -17,5 +17,6 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public int BrandId { get; set; }
         public int SubCategoryId { get; set; }
         public string Image { get; set; }
+        public string Desc { get; set; }
     }
 }
