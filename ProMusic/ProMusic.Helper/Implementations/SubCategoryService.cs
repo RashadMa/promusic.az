@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs;
+using ProMusic.Helper.DTOs.CategoryDto;
 using ProMusic.Helper.DTOs.SubCategoryDto;
 using ProMusic.Helper.Exceptions;
 using ProMusic.Helper.Interfaces;
@@ -91,7 +92,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<SubCategoryListItemDto>> GetAll(int page)
         {
-            var query = _unitOfWork.SubCategoryRepository.GetAll(x => !x.IsDeleted);
+            var query = _unitOfWork.SubCategoryRepository.GetAll(x => !x.IsDeleted, "Category");
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
             List<SubCategoryListItemDto> items = query
@@ -103,6 +104,7 @@ namespace ProMusic.Helper.Implementations
                     Name = x.Name,
                     Image = x.Image,
                     CategoryId = x.CategoryId,
+                    Category = _mapper.Map<CategoryGetDto>(x.Category)
                 })
                 .ToList();
 

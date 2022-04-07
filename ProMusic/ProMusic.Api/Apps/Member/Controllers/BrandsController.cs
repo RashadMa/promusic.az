@@ -16,12 +16,10 @@ namespace ProMusic.Api.Apps.Member.Controllers
     public class BrandsController : Controller
     {
         private readonly IBrandService _brandService;
-        private readonly IMapper _mapper;
 
-        public BrandsController(IBrandService brandService, IMapper mapper)
+        public BrandsController(IBrandService brandService)
         {
             _brandService = brandService;
-            _mapper = mapper;
         }
 
         #region Get

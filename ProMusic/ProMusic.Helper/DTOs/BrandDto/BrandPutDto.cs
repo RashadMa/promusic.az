@@ -7,6 +7,7 @@ namespace ProMusic.Helper.DTOs.BrandDto
     public class BrandPutDto
     {
         public string Name { get; set; }
+        public string Desc { get; set; }
         public IFormFile Photo { get; set; }
     }
     public class BrandPutDtoValidator : AbstractValidator<BrandPutDto>
@@ -27,6 +28,10 @@ namespace ProMusic.Helper.DTOs.BrandDto
             RuleFor(x => x.Name)
                 .MaximumLength(20)
                 .WithMessage("Max length must be less than 20 character");
+
+            RuleFor(x => x.Desc)
+                .MaximumLength(400)
+                .WithMessage("Max length must be less than 400 character");
         }
     }
 }

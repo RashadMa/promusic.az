@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using ProMusic.Core.Entities;
+using ProMusic.Helper.DTOs.CategoryDto;
+
 namespace ProMusic.Helper.DTOs.SubCategoryDto
 {
     public class SubCategoryListItemDto
@@ -8,5 +12,6 @@ namespace ProMusic.Helper.DTOs.SubCategoryDto
         public string Image { get; set; }
         public bool IsDeleted { get; set; }
         public int CategoryId { get; set; }
+        public CategoryGetDto Category { get; set; }
     }
 }

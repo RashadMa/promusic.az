@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
+using ProMusic.Helper.DTOs.BrandDto;
 
 namespace ProMusic.Helper.DTOs.ProductDto
 {
@@ -13,5 +14,6 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public double? Rate { get; set; }
         public int SubCategoryId { get; set; }
         public string Desc { get; set; }
+        public BrandGetDto Brand { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
+using ProMusic.Helper.DTOs.BrandDto;
 
 namespace ProMusic.Helper.DTOs.ProductDto
 {

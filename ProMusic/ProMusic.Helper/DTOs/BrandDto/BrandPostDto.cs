@@ -7,6 +7,7 @@ namespace ProMusic.Helper.DTOs.BrandDto
     public class BrandPostDto
     {
         public string Name { get; set; }
+        public string Desc { get; set; }
         public IFormFile Photo { get; set; }
     }
     public class BrandPostDtoValidator : AbstractValidator<BrandPostDto>
@@ -27,6 +28,12 @@ namespace ProMusic.Helper.DTOs.BrandDto
             RuleFor(x => x.Name)
                 .MaximumLength(20)
                 .WithMessage("Max length must be less than 20 character")
+                .NotEmpty()
+                .WithMessage("Name is required");
+
+            RuleFor(x => x.Desc)
+                .MaximumLength(400)
+                .WithMessage("Max length must be less than 400 character")
                 .NotEmpty()
                 .WithMessage("Name is required");
         }

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using ProMusic.Helper.DTOs.CategoryDto;
+
 namespace ProMusic.Helper.DTOs.SubCategoryDto
 {
     public class SubCategoryGetDto

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProMusic.Core;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs;
+using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.ProductDto;
 using ProMusic.Helper.Exceptions;
 using ProMusic.Helper.Interfaces;
@@ -90,7 +91,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<ProductListItemDto>> GetAll(int page)
         {
-            var query = _unitOfWork.ProductRepository.GetAll(x => !x.IsDeleted);
+            var query = _unitOfWork.ProductRepository.GetAll(x => !x.IsDeleted, "Brand");
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
             List<ProductListItemDto> items = query
@@ -106,6 +107,7 @@ namespace ProMusic.Helper.Implementations
                     Rate = x.Rate,
                     SubCategoryId = x.SubCategoryId,
                     Desc = x.Desc,
+                    Brand = _mapper.Map<BrandGetDto>(x.Brand),
                 })
                 .ToList();
 

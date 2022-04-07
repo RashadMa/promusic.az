@@ -10,6 +10,7 @@ using ProMusic.Core.Entities;
 using ProMusic.Data.Repositories;
 using ProMusic.Helper.DTOs;
 using ProMusic.Helper.DTOs.BrandDto;
+using ProMusic.Helper.DTOs.ProductDto;
 using ProMusic.Helper.Exceptions;
 using ProMusic.Helper.Interfaces;
 
@@ -61,6 +62,7 @@ namespace ProMusic.Helper.Implementations
                 Id = brand.Id,
                 Name = brand.Name,
                 Image = brand.Image,
+                Desc = brand.Desc,
             };
         }
 
@@ -70,7 +72,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<BrandGetDto> GetByIdAsync(int id)
         {
-            Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            Brand brand = await _unitOfWork.BrandRepository.GetAsync(x => x.Id == id && !x.IsDeleted, "Products");
             if (brand is null) throw new NotFoundException("Item not found");
             BrandGetDto brandGetDto = _mapper.Map<BrandGetDto>(brand);
             return brandGetDto;
@@ -82,9 +84,10 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<BrandListItemDto>> GetAll(int page)
         {
-            var query = _unitOfWork.BrandRepository.GetAll(x => !x.IsDeleted);
+            var query = _unitOfWork.BrandRepository.GetAll(x => !x.IsDeleted, "Products");
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
+
             List<BrandListItemDto> items = query
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
@@ -93,6 +96,8 @@ namespace ProMusic.Helper.Implementations
                     Id = x.Id,
                     Name = x.Name,
                     Image = x.Image,
+                    Desc = x.Desc,
+                    Products = _mapper.Map<List<ProductGetDto>>(x.Products) 
                 })
                 .ToList();
 

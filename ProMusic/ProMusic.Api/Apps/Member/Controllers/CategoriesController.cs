@@ -12,13 +12,10 @@ namespace ProMusic.Api.Apps.Member.Controllers
     public class CategoriesController : Controller
     {
         private readonly ICategoryService _categoryService;
-        private readonly ISubCategoryService _subCategoryService;
 
-        public CategoriesController(ICategoryService categoryService,
-                                    ISubCategoryService subCategoryService)
+        public CategoriesController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
-            _subCategoryService = subCategoryService;
         }
 
         #region Get
