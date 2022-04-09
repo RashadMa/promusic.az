@@ -1,18 +1,9 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Implementations/BrandService.cs">
-    <Files>
-      <File FileName="ProMusic.Helper/Implementations/BrandService.cs" Line="1" Column="1" NotebookId="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" expanded="True">
-            <Node name="ProMusic.Helper" expanded="True">
-              <Node name="Implementations" expanded="True">
-                <Node name="BrandService.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ProMusic" expanded="True" />
         </State>
       </Pad>
     </Pads>
@@ -27,7 +18,6 @@
       <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Member/Controllers/SubCategoriesController.cs" relfile="ProMusic.Api/Apps/Member/Controllers/SubCategoriesController.cs" line="36" column="1" />
       <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Member/Controllers/SubCategoriesController.cs" relfile="ProMusic.Api/Apps/Member/Controllers/SubCategoriesController.cs" line="37" column="1" />
       <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" line="32" column="1" />
-      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/CategoriesController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/CategoriesController.cs" line="57" column="1" />
       <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" line="33" column="1" />
       <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" line="62" column="1" />
       <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" relfile="ProMusic.Api/Apps/Admin/Controllers/BrandsController.cs" line="64" column="1" />
