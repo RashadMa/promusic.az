@@ -59,7 +59,7 @@ namespace ProMusic.Apps.Admin.Controllers
         #region Update
 
         [HttpPut("{id}")]        
-        public async Task<IActionResult> Update(int id, BrandPutDto brandPutDto)
+        public async Task<IActionResult> Update(int id, [FromForm] BrandPutDto brandPutDto)
         {
             await _brandService.UpdateAsync(id, brandPutDto);
             return NoContent();

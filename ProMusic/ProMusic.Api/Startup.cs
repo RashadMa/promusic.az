@@ -61,25 +61,31 @@ namespace ProMusic.Api
 
             services.AddCors();
 
-            services.AddCors(options =>
-            {
-                options.AddDefaultPolicy(
-                    builder =>
-                    {
-                        builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
-                                            .AllowAnyHeader()
-                                            .AllowAnyMethod();
-                    });
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddDefaultPolicy(
+            //        builder =>
+            //        {
+            //            builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+            //                                .AllowAnyHeader()
+            //                                .AllowAnyMethod();
+
+
+            //            //builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyHeader();
+            //        });
+            //});
 
             services.AddCors(options =>
             {
-                options.AddPolicy(name: "AllowOrigin",
+                options.AddPolicy(name: "Access-Control-Allow-Origin",
                     builder =>
                     {
-                        builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+                        //builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+                        builder.WithOrigins("http://localhost:3000", "http://localhost:3001")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod();
+
+                        //builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     });
             });
 

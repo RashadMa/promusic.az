@@ -150,6 +150,8 @@ namespace ProMusic.Helper.Implementations
 
             if (await _unitOfWork.BrandRepository.IsExist(x => x.Id != id && x.Name.ToUpper().Trim() == brandPutDto.Name.ToUpper().Trim())) throw new RecordDuplicatedException("Brand already exist");
             brand.Name = brandPutDto.Name;
+            brand.Desc = brandPutDto.Desc;
+            brand.Image = fileName;
             await _unitOfWork.SaveAsync();
         }
 
