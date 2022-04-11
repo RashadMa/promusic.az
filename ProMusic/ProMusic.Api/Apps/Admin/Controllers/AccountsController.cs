@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using ProMusic.Core.Entities;
+using ProMusic.Data;
 using ProMusic.Helper.DTOs.AccountDto;
 
 namespace ProMusic.Api.Apps.Admin.Controllers
@@ -18,12 +19,17 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly DataContext _context;
 
-        public AccountsController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager, SignInManager<AppUser> signInManager)
+        public AccountsController(UserManager<AppUser> userManager,
+                                  RoleManager<IdentityRole> roleManager,
+                                  SignInManager<AppUser> signInManager,
+                                  DataContext context)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
+            _context = context;
         }
 
         #region Login
@@ -63,12 +69,12 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto registerDto)
         {
-            AppUser user = await _userManager.FindByNameAsync(registerDto.UserName);
+            AppUser user = await _userManager.FindByNameAsync(registerDto.Name);
             if (user != null) return BadRequest();
             user = new AppUser
             {
                 Name = registerDto.Name,
-                UserName = registerDto.UserName,
+                Email = registerDto.Email,
             };
             var result = await _userManager.CreateAsync(user, registerDto.Password);
             if (!result.Succeeded) return BadRequest();
@@ -88,16 +94,43 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         //    var result1 = _roleManager.CreateAsync(new IdentityRole("Admin")).Result;
         //    var result2 = _roleManager.CreateAsync(new IdentityRole("Member")).Result;
 
-        //    var user1 = new AppUser { Name = "Rashad", UserName = "Rashad", IsAdmin = false };
-        //    var user2 = new AppUser { Name = "Super", UserName = "SuperAdmin", IsAdmin = true };
+        //    if (!result1.Succeeded || !result2.Succeeded)
+        //    {
+        //        return BadRequest("Wrong Role");
+        //    }
+
+
+        //    await _context.SaveChangesAsync();
+
+        //    var user1 = new AppUser { Name = "Rashad", UserName = "Test1", Email="rashad@gmail.com", IsAdmin = false };
+        //    var user2 = new AppUser { Name = "Superadmin", UserName = "Test2", Email="superadmin@gmail.com", IsAdmin = true };
         //    var result3 = await _userManager.CreateAsync(user1, "Rashad123");
         //    var result4 = await _userManager.CreateAsync(user2, "Rashad123");
 
-        //    return Ok(new { resul1 = result3, resul2 = result4});
+        //    if (!result3.Succeeded || !result4.Succeeded)
+        //    {
+        //        foreach (var item in result3.Errors)
+        //        {
+        //            return BadRequest(item.Description);
+        //        }
+        //        foreach (var item in result4.Errors)
+        //        {
+        //            return BadRequest(item.Description);
+        //        }
+        //    }
+
+        //    await _context.SaveChangesAsync();
+        //    //return Ok(new { resul1 = result3, resul2 = result4 });
 
         //    var result5 = _userManager.AddToRoleAsync(user1, "Member").Result;
         //    var result6 = _userManager.AddToRoleAsync(user2, "Admin").Result;
 
+        //    if (!result5.Succeeded || !result6.Succeeded)
+        //    {
+        //        return BadRequest("Wrong Last");
+        //    }
+
+        //    await _context.SaveChangesAsync();
         //    return Ok();
         //}
 

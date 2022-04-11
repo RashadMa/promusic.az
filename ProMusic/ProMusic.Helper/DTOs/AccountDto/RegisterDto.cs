@@ -5,6 +5,7 @@ namespace ProMusic.Helper.DTOs.AccountDto
 {
     public class RegisterDto
     {
+        public string Email { get; set; }
         public string UserName { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
@@ -14,13 +15,21 @@ namespace ProMusic.Helper.DTOs.AccountDto
     {
         public RegisterDtoValidator()
         {
-            RuleFor(x => x.Name)
+            RuleFor(x => x.Email)
                 .MaximumLength(30)
-                .NotNull();
-
-            RuleFor(x => x.UserName)
+                .WithMessage("Max Length must be less than 30")
+                .MinimumLength(5)
+                .WithMessage("Min Length must be greater than 5")
                 .NotNull()
-                .MaximumLength(30);
+                .WithMessage("Email is required");
+
+            RuleFor(x => x.Name)
+                .MinimumLength(2)
+                .WithMessage("Min Length must be greater than 2")
+                .MaximumLength(30)
+                .WithMessage("Max Length must be less than 30")
+                .NotNull()
+                .WithMessage("Name is required");
 
             RuleFor(x => x.Password)
                 .NotNull()

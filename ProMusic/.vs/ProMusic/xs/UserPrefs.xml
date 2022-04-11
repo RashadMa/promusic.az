@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Api/Apps/Admin/Controllers/AccountsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/DTOs/AccountDto/RegisterDto.cs">
     <Files>
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/SubCategoriesController.cs" Line="70" Column="10" NotebookId="1" />
-      <File FileName="ProMusic.Api/Apps/Admin/Controllers/AccountsController.cs" Line="76" Column="47" NotebookId="1" />
+      <File FileName="ProMusic.Helper/DTOs/AccountDto/LoginDto.cs" Line="1" Column="1" />
+      <File FileName="ProMusic.Helper/DTOs/AccountDto/RegisterDto.cs" Line="20" Column="34" />
+      <File FileName="ProMusic.Api/Apps/Admin/Controllers/AccountsController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,20 +12,17 @@
             <Node name="ProMusic.Api" expanded="True">
               <Node name="Apps" expanded="True">
                 <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True">
-                    <Node name="AccountsController.cs" selected="True" />
-                  </Node>
+                  <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
             </Node>
-            <Node name="ProMusic.Core" expanded="True">
-              <Node name="Entities" expanded="True" />
-            </Node>
             <Node name="ProMusic.Helper" expanded="True">
               <Node name="DTOs" expanded="True">
-                <Node name="SettingDto" expanded="True" />
+                <Node name="AccountDto" expanded="True">
+                  <Node name="RegisterDto.cs" selected="True" />
+                </Node>
+                <Node name="BrandDto" expanded="True" />
               </Node>
-              <Node name="Implementations" expanded="True" />
             </Node>
           </Node>
         </State>
