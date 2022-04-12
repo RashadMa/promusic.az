@@ -20,6 +20,7 @@ namespace ProMusic.Data
         public DbSet<Information> Informations { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<BlackList> BlackLists { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
