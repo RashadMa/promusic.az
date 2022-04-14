@@ -23,6 +23,14 @@ namespace ProMusic.Helper.DTOs.AccountDto
                 .NotNull()
                 .WithMessage("Email is required");
 
+            RuleFor(x=>x.UserName)
+                .MinimumLength(2)
+                .WithMessage("Min Length must be greater than 2")
+                .MaximumLength(30)
+                .WithMessage("Max Length must be less than 30")
+                .NotNull()
+                .WithMessage("Name is required");
+
             RuleFor(x => x.Name)
                 .MinimumLength(2)
                 .WithMessage("Min Length must be greater than 2")
