@@ -104,7 +104,7 @@ namespace ProMusic.Helper.Implementations
         #endregion
 
         #region Update
-
+        
         public async Task UpdateAsync(int id, CategoryPutDto categoryPutDto)
         {
             Category category = await _unitOfWork.CategoryRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
