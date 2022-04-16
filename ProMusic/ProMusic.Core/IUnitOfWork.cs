@@ -14,6 +14,7 @@ namespace ProMusic.Core
         ISliderRepository SliderRepository { get; }
         IInformationRepository InformationRepository { get; }
         ISubCategoryRepository SubCategoryRepository { get; }
+        ICommentRepository CommentRepository { get; }
 
         int Save();
         Task<int> SaveAsync();

@@ -16,25 +16,6 @@ public class SubCategoryPostDtoValidator : AbstractValidator<SubCategoryPostDto>
 {
     public SubCategoryPostDtoValidator()
     {
-        //RuleFor(x => x).Custom((x, context) =>
-        //{
-        //    if (x.Photo != null)
-        //    {
-        //        if (x.Photo?.ContentType != "image/jpeg" && x.Photo.ContentType != "image/png")
-        //            context.AddFailure("ImageFile", "File type must be jpeg or png");
-        //    }
-
-        //});
-
-        //RuleFor(x => x).Custom((x, context) =>
-        //{
-        //    if (x.Photo != null)
-        //    {
-        //        if (x.Photo?.Length > 4194304)
-        //            context.AddFailure("ImageFile", "file size must be less than 4mb");
-
-        //    }
-        //});
 
         RuleFor(x => x.Name)
             .MaximumLength(100)

@@ -16,6 +16,7 @@ namespace ProMusic.Data
         private SliderRepository _sliderRepository;
         private InformationRepository _informationRepository;
         private SubCategoryRepository _subCategoryRepository;
+        private CommentRepository _commentRepository;
 
         public UnitOfWork(DataContext context)
         {
@@ -29,6 +30,7 @@ namespace ProMusic.Data
         public ISliderRepository SliderRepository => _sliderRepository ?? new SliderRepository(_context);
         public IInformationRepository InformationRepository => _informationRepository ?? new InformationRepository(_context);
         public ISubCategoryRepository SubCategoryRepository => _subCategoryRepository ?? new SubCategoryRepository(_context);
+        public ICommentRepository CommentRepository => _commentRepository ?? new CommentRepository(_context);
 
         public int Save()
         {

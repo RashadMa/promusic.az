@@ -59,6 +59,8 @@ namespace ProMusic.Api
 
             services.AddScoped<ISubCategoryService, SubCategoryService>();
 
+            services.AddScoped<ICommentService, CommentService>();
+
             services.AddCors();
 
             //services.AddCors(options =>

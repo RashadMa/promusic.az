@@ -12,7 +12,7 @@ namespace ProMusic.Data
         {
 
         }
-        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Comment> Brands { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -21,6 +21,7 @@ namespace ProMusic.Data
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<BlackList> BlackLists { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +33,7 @@ namespace ProMusic.Data
             modelBuilder.ApplyConfiguration(new SliderConfiguration());
             modelBuilder.ApplyConfiguration(new InformationConfiguration());
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

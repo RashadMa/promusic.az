@@ -20,6 +20,7 @@
     <None Remove="DTOs\SettingDto\" />
     <None Remove="DTOs\AccountDto\" />
     <None Remove="DTOs\SubCategoryDto\" />
+    <None Remove="DTOs\CommentDto\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -35,6 +36,7 @@
     <Folder Include="DTOs\SettingDto\" />
     <Folder Include="DTOs\AccountDto\" />
     <Folder Include="DTOs\SubCategoryDto\" />
+    <Folder Include="DTOs\CommentDto\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProMusic.Data\ProMusic.Data.csproj" />

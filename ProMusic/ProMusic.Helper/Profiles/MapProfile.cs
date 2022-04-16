@@ -3,6 +3,7 @@ using AutoMapper;
 using ProMusic.Core.Entities;
 using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.CategoryDto;
+using ProMusic.Helper.DTOs.CommentDto;
 using ProMusic.Helper.DTOs.InformationDto;
 using ProMusic.Helper.DTOs.ProductDto;
 using ProMusic.Helper.DTOs.SettingDto;
@@ -77,6 +78,12 @@ namespace ProMusic.Helper.Profiles
             CreateMap<SettingPostDto, Setting>().ForMember(x => x.Value, y => y.MapFrom(x => x.Photo.FileName));
             CreateMap<Setting, SettingListItemDto>();
 
+            #endregion
+
+            #region Comment
+            CreateMap<Comment, CommentGetDto>();
+            CreateMap<CommentPostDto, Comment>();
+            CreateMap<Comment, CommentGetAllDto>();
             #endregion
         }
     }
