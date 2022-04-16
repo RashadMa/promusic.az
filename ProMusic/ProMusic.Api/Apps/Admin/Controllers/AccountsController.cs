@@ -82,13 +82,13 @@ namespace ProMusic.Api.Apps.Admin.Controllers
                 Name = registerDto.Name,
                 Email = registerDto.Email,
                 UserName = registerDto.Email,
-            }; 
+            };
             var result = await _userManager.CreateAsync(user, registerDto.Password);
             if (!result.Succeeded) return StatusCode(500, "Internal server error");
             var roleResult = await _userManager.AddToRoleAsync(user, "Member");
             if (!roleResult.Succeeded) return StatusCode(500, "Internal server error");
             await _signInManager.SignInAsync(user, true);
-            return Ok( user);
+            return Ok(user);
         }
 
         #endregion
@@ -101,13 +101,11 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         //    await _context.BlackLists.AddAsync(token);
         //    return Ok();
         //}
-
-        #endregion
-
         private async Task<bool> IsBlackListed(string token)
         {
             return await _context.BlackLists.AnyAsync(x => x.Token == token);
         }
+        #endregion
 
         #region Create role and user
 

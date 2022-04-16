@@ -7,7 +7,7 @@ using ProMusic.Helper.Interfaces;
 
 namespace ProMusic.Api.Apps.Member.Controllers
 {
-    [Route("member/api/[controller]")]
+    [Route("member/api/[controller]"), ApiController]
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;

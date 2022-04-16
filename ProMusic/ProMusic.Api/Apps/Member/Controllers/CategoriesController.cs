@@ -8,7 +8,7 @@ using ProMusic.Helper.Interfaces;
 
 namespace ProMusic.Api.Apps.Member.Controllers
 {
-    [Route("member/api/[controller]")]
+    [Route("member/api/[controller]"), ApiController]
     public class CategoriesController : Controller
     {
         private readonly ICategoryService _categoryService;

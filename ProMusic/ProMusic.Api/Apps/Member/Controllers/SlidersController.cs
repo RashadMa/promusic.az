@@ -7,7 +7,7 @@ using ProMusic.Helper.Interfaces;
 
 namespace ProMusic.Api.Apps.Member.Controllers
 {
-    [Route("member/api/[controller]")]
+    [Route("member/api/[controller]"), ApiController]
     public class SlidersController : Controller
     {
         private readonly ISliderService _sliderService;
