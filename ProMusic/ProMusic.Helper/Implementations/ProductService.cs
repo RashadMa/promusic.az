@@ -12,6 +12,7 @@ using ProMusic.Helper.DTOs;
 using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.CommentDto;
 using ProMusic.Helper.DTOs.ProductDto;
+using ProMusic.Helper.DTOs.SubCategoryDto;
 using ProMusic.Helper.Exceptions;
 using ProMusic.Helper.Interfaces;
 
@@ -92,7 +93,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<ProductListItemDto>> GetAll(int page)
         {
-            var query = _unitOfWork.ProductRepository.GetAll(x => !x.IsDeleted, "Brand", "Comments");
+            var query = _unitOfWork.ProductRepository.GetAll(x => !x.IsDeleted, "Brand", "Comments", "SubCategory");
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
             List<ProductListItemDto> items = query
@@ -104,12 +105,14 @@ namespace ProMusic.Helper.Implementations
                     Name = x.Name,
                     Image = x.Image,
                     SalePrice = x.SalePrice,
+                    CostPrice = x.CostPrice,
                     DiscountPercent = x.DiscountPercent,
                     Rate = x.Rate,
                     SubCategoryId = x.SubCategoryId,
                     Desc = x.Desc,
                     Brand = _mapper.Map<BrandGetDto>(x.Brand),
-                    Comments = _mapper.Map<List<CommentGetDto>>(x.Comments), 
+                    Comments = _mapper.Map<List<CommentGetDto>>(x.Comments),
+                    SubCategory = _mapper.Map<SubCategoryGetDto>(x.SubCategory),
                 })
                 .ToList();
 

@@ -10,8 +10,8 @@ using ProMusic.Data;
 namespace ProMusic.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220417151412_asdjansldasldnlasnd")]
-    partial class asdjansldasldnlasnd
+    [Migration("20220417111456_Testasdqo")]
+    partial class Testasdqo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

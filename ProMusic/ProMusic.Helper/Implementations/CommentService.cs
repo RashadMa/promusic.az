@@ -29,7 +29,9 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<CommentGetDto> CreateAsync(CommentPostDto postDto)
         {
+            
             Comment comment = _mapper.Map<Comment>(postDto);
+
             await _unitOfWork.CommentRepository.AddAsync(comment);
             await _unitOfWork.SaveAsync();
             return new CommentGetDto
@@ -48,7 +50,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<CommentGetDto> GetByIdAsync(int id)
         {
-            Comment comment = await _unitOfWork.CommentRepository.GetAsync(x => x.Id == id && !x.IsDeleted, "Product", "AppUser");
+            Comment comment = await _unitOfWork.CommentRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
             if (comment is null) throw new NotFoundException("Item not found");
             CommentGetDto commentGetDto = _mapper.Map<CommentGetDto>(comment);
             return commentGetDto;
@@ -60,7 +62,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<CommentGetAllDto>> GetAll(int page)
         {
-            var query = _unitOfWork.CommentRepository.GetAll(x => !x.IsDeleted, "Product");
+            var query = _unitOfWork.CommentRepository.GetAll(x => !x.IsDeleted);
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
 
@@ -75,7 +77,6 @@ namespace ProMusic.Helper.Implementations
                     AppUserId = x.AppUserId,
                     ProductId = x.ProductId,
                     Product = _mapper.Map<ProductGetDto>(x.Product),
-                    //AppUser = _mapper.Map<AppUserGetDto>(x.AppUser),
                 })
                 .ToList();
 

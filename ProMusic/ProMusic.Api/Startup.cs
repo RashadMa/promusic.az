@@ -61,6 +61,11 @@ namespace ProMusic.Api
 
             services.AddScoped<ICommentService, CommentService>();
 
+            services.AddScoped<IAccountService, AccountService>();
+
+            services.AddScoped<IOrderService, OrderService>();
+
+
             services.AddCors();
 
             //services.AddCors(options =>

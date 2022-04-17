@@ -1,10 +1,12 @@
 ﻿using System;
 using AutoMapper;
 using ProMusic.Core.Entities;
+using ProMusic.Helper.DTOs.AccountDto;
 using ProMusic.Helper.DTOs.BrandDto;
 using ProMusic.Helper.DTOs.CategoryDto;
 using ProMusic.Helper.DTOs.CommentDto;
 using ProMusic.Helper.DTOs.InformationDto;
+using ProMusic.Helper.DTOs.OrderDto;
 using ProMusic.Helper.DTOs.ProductDto;
 using ProMusic.Helper.DTOs.SettingDto;
 using ProMusic.Helper.DTOs.SliderDto;
@@ -81,9 +83,34 @@ namespace ProMusic.Helper.Profiles
             #endregion
 
             #region Comment
+
             CreateMap<Comment, CommentGetDto>();
             CreateMap<CommentPostDto, Comment>();
             CreateMap<Comment, CommentGetAllDto>();
+
+            #endregion
+
+            #region Order item
+
+            CreateMap<OrderItem, OrderItemGetDto>();
+            CreateMap<OrderItemPostDto, OrderItem>();
+            CreateMap<OrderItem, OrderItemListItemDto>();
+
+            #endregion
+
+            #region Order
+
+            CreateMap<Order, OrderGetDto>();
+            CreateMap<OrderPostDto, Order>();
+            CreateMap<Order, OrderListItemDto>();
+
+            #endregion
+
+            #region AppUser
+            
+            CreateMap<AppUser, AppUserGetDto>();
+            CreateMap<AppUser, AppUserListItemDto>();
+            
             #endregion
         }
     }

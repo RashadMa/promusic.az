@@ -23,6 +23,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([FromForm] CategoryPostDto postDto)
         {
             var category = await _categoryService.CreateAsync(postDto);
@@ -44,6 +45,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region GetAll
 
         [HttpGet("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _categoryService.GetAll(page));

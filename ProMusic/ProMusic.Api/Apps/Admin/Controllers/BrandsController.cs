@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProMusic.Core;
@@ -28,6 +29,7 @@ namespace ProMusic.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([FromForm] BrandPostDto brandPostDto)
         {
             var brand = await _brandService.CreateAsync(brandPostDto);
@@ -47,8 +49,8 @@ namespace ProMusic.Apps.Admin.Controllers
         #endregion
 
         #region GetAll
-
         [HttpGet("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _brandService.GetAll(page));

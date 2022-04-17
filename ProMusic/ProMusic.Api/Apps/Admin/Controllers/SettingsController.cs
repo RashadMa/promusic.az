@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Helper.DTOs.SettingDto;
 using ProMusic.Helper.Interfaces;
@@ -31,6 +32,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region GetAll
 
         [HttpGet("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _settingService.GetAll(page));

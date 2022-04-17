@@ -17,6 +17,9 @@ namespace ProMusic.Data
         private InformationRepository _informationRepository;
         private SubCategoryRepository _subCategoryRepository;
         private CommentRepository _commentRepository;
+        private OrderRepository _orderRepository;
+        private OrderItemRepository _orderItemRepository;
+        private AccountRepository _accountRepository;
 
         public UnitOfWork(DataContext context)
         {
@@ -31,6 +34,9 @@ namespace ProMusic.Data
         public IInformationRepository InformationRepository => _informationRepository ?? new InformationRepository(_context);
         public ISubCategoryRepository SubCategoryRepository => _subCategoryRepository ?? new SubCategoryRepository(_context);
         public ICommentRepository CommentRepository => _commentRepository ?? new CommentRepository(_context);
+        public IOrderRepository OrderRepository => _orderRepository ?? new OrderRepository(_context);
+        public IOrderItemRepository OrderItemRepository => _orderItemRepository ?? new OrderItemRepository(_context);
+        public IAccountRepository AccountRepository => _accountRepository ?? new AccountRepository(_context);
 
         public int Save()
         {

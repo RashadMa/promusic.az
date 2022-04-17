@@ -2,7 +2,7 @@
 
 namespace ProMusic.Data.Migrations
 {
-    public partial class asdjansldasldnlasnd : Migration
+    public partial class Testasdqo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

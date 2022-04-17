@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Helper.DTOs.SliderDto;
 using ProMusic.Helper.Interfaces;
 
 namespace ProMusic.Api.Apps.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("admin/api/[controller]"), ApiController]
     public class SlidersController : Controller
     {
@@ -21,6 +23,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([FromForm] SliderPostDto postDto)
         {
             var slider = await _sliderService.CreateAsync(postDto);
@@ -42,6 +45,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region GetAll
 
         [HttpGet("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _sliderService.GetAll(page));

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProMusic.Helper.DTOs.SubCategoryDto;
 using ProMusic.Helper.Interfaces;
@@ -21,6 +22,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region Create
 
         [HttpPost("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([FromForm] SubCategoryPostDto postDto)
         {
             var subCategory = await _subCategoryService.CreateAsync(postDto);
@@ -42,6 +44,7 @@ namespace ProMusic.Api.Apps.Admin.Controllers
         #region GetAll
 
         [HttpGet("")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll(int page = 1)
         {
             return Ok(await _subCategoryService.GetAll(page));

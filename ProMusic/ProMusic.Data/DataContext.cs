@@ -22,6 +22,8 @@ namespace ProMusic.Data
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<BlackList> BlackLists { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +36,8 @@ namespace ProMusic.Data
             modelBuilder.ApplyConfiguration(new InformationConfiguration());
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
