@@ -604,7 +604,7 @@ namespace ProMusic.Data.Migrations
                         .HasForeignKey("AppUserId");
 
                     b.HasOne("ProMusic.Core.Entities.Product", "Product")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

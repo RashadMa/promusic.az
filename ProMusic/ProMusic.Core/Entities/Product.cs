@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProMusic.Core.Entities
@@ -16,6 +17,7 @@ namespace ProMusic.Core.Entities
         public int SubCategoryId { get; set; }
         public int BrandId { get; set; }
         public SubCategory SubCategory { get; set; }
+        public List<Comment> Comments { get; set; }
         public Brand Brand { get; set; }
     }
 }

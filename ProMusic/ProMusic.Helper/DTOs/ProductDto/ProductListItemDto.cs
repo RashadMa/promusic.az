@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using ProMusic.Helper.DTOs.BrandDto;
+using ProMusic.Helper.DTOs.CommentDto;
 
 namespace ProMusic.Helper.DTOs.ProductDto
 {
@@ -14,6 +16,7 @@ namespace ProMusic.Helper.DTOs.ProductDto
         public double? Rate { get; set; }
         public int SubCategoryId { get; set; }
         public string Desc { get; set; }
+        public List<CommentGetDto> Comments { get; set; }
         public BrandGetDto Brand { get; set; }
     }
 }
