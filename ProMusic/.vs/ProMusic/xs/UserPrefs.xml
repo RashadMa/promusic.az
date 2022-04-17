@@ -1,9 +1,42 @@
 ﻿<Properties StartupConfiguration="{592821A5-29FA-488B-BF3F-DD5BDF39D7C8}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProMusic.Helper/Implementations/CommentService.cs">
+    <Files>
+      <File FileName="ProMusic.Helper/Implementations/CommentService.cs" Line="73" Column="35" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProMusic" selected="True" />
+          <Node name="ProMusic" expanded="True">
+            <Node name="ProMusic.Api" expanded="True">
+              <Node name="Apps" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
+                <Node name="Member" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="ServiceExtentions" expanded="True" />
+            </Node>
+            <Node name="ProMusic.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="ProMusic.Data" expanded="True">
+              <Node name="Configurations" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="ProMusic.Helper" expanded="True">
+              <Node name="DTOs" expanded="True">
+                <Node name="AccountDto" expanded="True" />
+                <Node name="CommentDto" expanded="True" />
+              </Node>
+              <Node name="Implementations" expanded="True">
+                <Node name="CommentService.cs" selected="True" />
+              </Node>
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -12,7 +45,11 @@
   <MonoDevelop.Ide.ItemProperties.ProMusic.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Member/Controllers/CommentsController.cs" relfile="ProMusic.Api/Apps/Member/Controllers/CommentsController.cs" line="47" column="1" />
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Member/Controllers/CommentsController.cs" relfile="ProMusic.Api/Apps/Member/Controllers/CommentsController.cs" line="48" column="1" />
+      <Breakpoint file="/Users/rashad/Desktop/promusic.az/ProMusic/ProMusic.Api/Apps/Member/Controllers/CommentsController.cs" relfile="ProMusic.Api/Apps/Member/Controllers/CommentsController.cs" line="46" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

@@ -60,7 +60,7 @@ namespace ProMusic.Helper.Implementations
 
         public async Task<PagenatedListDto<CommentGetAllDto>> GetAll(int page)
         {
-            var query = _unitOfWork.CommentRepository.GetAll(x => !x.IsDeleted, "Products");
+            var query = _unitOfWork.CommentRepository.GetAll(x => !x.IsDeleted, "Product");
             var pageSizeStr = await _unitOfWork.SettingRepository.GetValueAsync("PageSize");
             int pageSize = int.Parse(pageSizeStr);
 
@@ -75,7 +75,7 @@ namespace ProMusic.Helper.Implementations
                     AppUserId = x.AppUserId,
                     ProductId = x.ProductId,
                     Product = _mapper.Map<ProductGetDto>(x.Product),
-                    AppUser = _mapper.Map<AppUserGetDto>(x.AppUser),
+                    //AppUser = _mapper.Map<AppUserGetDto>(x.AppUser),
                 })
                 .ToList();
 
